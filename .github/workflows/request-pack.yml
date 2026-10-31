@@ -1,0 +1,75 @@
+name: Build one requested pack
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "Pack id (a-z, 0-9, - and _)"
+        required: true
+      name:
+        required: true
+      lat:
+        required: true
+      lon:
+        required: true
+      zips:
+        required: false
+        default: ""
+      places:
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: pack-${{ inputs.id }}
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install osmium
+      - name: Build the pack
+        env:
+          P_ID: ${{ inputs.id }}
+          P_NAME: ${{ inputs.name }}
+          P_LAT: ${{ inputs.lat }}
+          P_LON: ${{ inputs.lon }}
+          P_ZIPS: ${{ inputs.zips }}
+          P_PLACES: ${{ inputs.places }}
+        run: |
+          mkdir -p packs
+          [ -f regions.tsv ] && cp regions.tsv packs/regions.tsv
+          python request_pack.py --id "$P_ID" --name "$P_NAME" --lat "$P_LAT" --lon="$P_LON" --zips "$P_ZIPS" --places "$P_PLACES"
+      - name: Upload the pack
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P_ID: ${{ inputs.id }}
+        run: |
+          gh release view packs >/dev/null 2>&1 || gh release create packs --title "Map packs" --notes "Map packs for Bio Hazard. Built automatically."
+          gh release upload packs "packs/${P_ID}.zip" --clobber
+      - name: Save the pack list
+        env:
+          P_ID: ${{ inputs.id }}
+        run: |
+          git config user.name "pack-builder"
+          git config user.email "pack-builder@users.noreply.github.com"
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python - <<'PY'
+          import os
+          new = [l for l in open("packs/regions.tsv", encoding="utf-8").read().splitlines() if l.startswith(os.environ["P_ID"] + "\t")]
+          cur = open("regions.tsv", encoding="utf-8").read().splitlines() if os.path.exists("regions.tsv") else []
+          cur = [l for l in cur if not l.startswith(os.environ["P_ID"] + "\t")]
+          open("regions.tsv", "w", encoding="utf-8").write("\n".join(cur + new) + "\n")
+          PY
+            git add regions.tsv
+            git diff --cached --quiet && break
+            git commit -m "Add map pack ${P_ID}"
+            git push origin HEAD:main && break
+            sleep $((RANDOM % 10 + 5))
+          done
