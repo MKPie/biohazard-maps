@@ -6,39 +6,31 @@ on:
 permissions:
   contents: write
 jobs:
-  list:
+  copy:
     runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.m.outputs.matrix }}
+    timeout-minutes: 300
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
     steps:
       - uses: actions/checkout@v4
-      - id: m
-        run: echo "matrix=$(python3 mirror_list.py)" >> "$GITHUB_OUTPUT"
       - name: Make the release that holds the copies
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
         run: gh release view extracts >/dev/null 2>&1 || gh release create extracts --title "Map files" --notes "Copies of the Geofabrik state files so map builds download fast. Updated monthly."
-  copy:
-    needs: list
-    runs-on: ubuntu-latest
-    timeout-minutes: 120
-    strategy:
-      fail-fast: false
-      max-parallel: 8
-      matrix: ${{ fromJson(needs.list.outputs.matrix) }}
-    steps:
-      - name: Download ${{ matrix.id }}
-        env:
-          URL: ${{ matrix.url }}
-          FILE: ${{ matrix.file }}
-        run: curl -fL --retry 5 --retry-delay 5 --retry-all-errors -A BioHazard-mirror -o "$FILE" "$URL" && ls -l "$FILE"
-      - name: Save the copy
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-          FILE: ${{ matrix.file }}
+      - name: List the files to copy
         run: |
-          SIZE=$(stat -c %s "$FILE")
-          if [ "$SIZE" -ge 2147483648 ]; then echo "$FILE is over 2 GB, GitHub cannot hold it; builds will use Geofabrik for it"; exit 0; fi
-          gh release upload extracts "$FILE" --clobber
+          python3 mirror_list.py --lines > list.txt
+          echo "$(wc -l < list.txt) files to copy:"
+          cut -d' ' -f1 list.txt | tr '\n' ' '
+      - name: Copy them, six at a time
+        run: |
+          cat > one.sh <<'SH'
+          f="$1"; u="$2"
+          if ! curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors -A BioHazard-mirror -o "$f" "$u"; then echo "FAILED download $f"; rm -f "$f"; exit 0; fi
+          size=$(stat -c %s "$f")
+          if [ "$size" -ge 2147483648 ]; then echo "SKIPPED $f is over 2 GB, builds will use Geofabrik for it"; rm -f "$f"; exit 0; fi
+          if gh release upload extracts "$f" --clobber; then echo "copied $f ($((size / 1000000)) MB)"; else echo "FAILED upload $f"; fi
+          rm -f "$f"
+          SH
+          xargs -P 6 -L 1 bash one.sh < list.txt
+      - name: Show what is saved
+        run: gh release view extracts --json assets --jq '.assets[] | "\(.name) \(.size / 1000000 | floor) MB"'
