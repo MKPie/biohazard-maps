@@ -3,7 +3,7 @@
 Picks the smallest Geofabrik extracts that cover the 50-mile circle (more than one when it crosses a state line), downloads them, and runs mkpack.py.
   python3 request_pack.py --id evanston-il --name "Evanston, Illinois" --lat 42.045 --lon -87.688 --zips 602 --places evanston
 """
-import argparse, json, math, os, re, subprocess, sys, urllib.request
+import argparse, concurrent.futures, json, math, os, re, subprocess, sys, time, urllib.error, urllib.request
 
 INDEX_URL = "https://download.geofabrik.de/index-v1.json"
 RADIUS_MILES = 50     # everything within 50 miles of the city center goes into the pack
@@ -83,20 +83,49 @@ def pick_extracts(index, lon, lat, radius_km):
     return out
 
 
-def fetch(url):
+MIRROR = "https://github.com/%s/releases/download/extracts/%s"   # our own copy of the state files (mirror-extracts.yml)
+
+
+def _get(url, dest):
+    req = urllib.request.Request(url, headers={"User-Agent": "BioHazard-pack-builder"})
+    with urllib.request.urlopen(req, timeout=120) as r, open(dest + ".part", "wb") as f:
+        while True:
+            chunk = r.read(1 << 20)
+            if not chunk:
+                break
+            f.write(chunk)
+    os.replace(dest + ".part", dest)
+
+
+def fetch(url, repo="MKPie/biohazard-maps"):
+    """Downloads one map file: from our own copy on GitHub first (fast), from Geofabrik if we do not have it yet."""
     os.makedirs("extracts", exist_ok=True)
-    dest = "extracts/" + os.path.basename(url)
-    if not os.path.exists(dest):
-        print("downloading " + url, flush=True)
-        req = urllib.request.Request(url, headers={"User-Agent": "BioHazard-pack-builder"})
-        with urllib.request.urlopen(req, timeout=600) as r, open(dest + ".part", "wb") as f:
-            while True:
-                chunk = r.read(1 << 20)
-                if not chunk:
+    name = os.path.basename(url)
+    dest = "extracts/" + name
+    if os.path.exists(dest):
+        return dest
+    t0 = time.time()
+    sources = [(MIRROR % (repo, name), "our copy"), (url, "Geofabrik")]
+    for src, label in sources:
+        for attempt in (1, 2, 3):
+            try:
+                _get(src, dest)
+                mb = os.path.getsize(dest) / 1e6
+                dt = max(0.001, time.time() - t0)
+                print("downloaded %s from %s: %.0f MB in %.0f s (%.1f MB/s)" % (name, label, mb, dt, mb / dt), flush=True)
+                return dest
+            except Exception as e:
+                print("%s try %d from %s failed: %s" % (name, attempt, label, e), flush=True)
+                if isinstance(e, urllib.error.HTTPError) and e.code == 404:
                     break
-                f.write(chunk)
-        os.replace(dest + ".part", dest)
-    return dest
+                time.sleep(2 * attempt)
+    sys.exit("could not download " + name)
+
+
+def fetch_all(picks, repo):
+    """All the files at once, so the slowest one decides the time instead of the sum."""
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, len(picks))) as ex:
+        return list(ex.map(lambda p: fetch(p[0], repo), picks))
 
 
 def main():
@@ -133,7 +162,7 @@ def main():
             print("+".join(sorted(p[1].replace("/", "_") for p in picks)))
             return
         print("map extracts: " + ", ".join(p[1] for p in picks), flush=True)
-        srcs = [fetch(p[0]) for p in picks]
+        srcs = fetch_all(picks, a.repo)
         if a.download_only:
             return
     cmd = [sys.executable, "mkpack.py", "--pbf"] + srcs + ["--id", a.id, "--name", a.name, "--lat", str(a.lat), "--lon=" + str(a.lon),
