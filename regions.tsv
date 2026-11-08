@@ -1,2 +1,3 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
+des-plaines-il	Des Plaines, Illinois	none	42.0415823	-87.8873916	Des Plaines, Illinois	3739686	62e5443a65f332020ba41c57e96d1084521fa10ad035a0994ff75896adf60e45	https://github.com/MKPie/biohazard-maps/releases/download/packs/des-plaines-il.zip	600	des plaines,cook
