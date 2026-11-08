@@ -45,7 +45,11 @@ def main():
     items = pick(index)
     if len(items) < 40:
         sys.exit("only %d US files found; expected about 50. Not copying anything." % len(items))
-    print(json.dumps({"include": items}, separators=(",", ":")))
+    if "--lines" in sys.argv:
+        for it in items:
+            print(it["file"] + " " + it["url"])
+    else:
+        print(json.dumps({"include": items}, separators=(",", ":")))
 
 
 if __name__ == "__main__":
