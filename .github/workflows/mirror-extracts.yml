@@ -1,0 +1,44 @@
+name: Copy the state map files
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 3 * *"
+permissions:
+  contents: write
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: m
+        run: echo "matrix=$(python3 mirror_list.py)" >> "$GITHUB_OUTPUT"
+      - name: Make the release that holds the copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh release view extracts >/dev/null 2>&1 || gh release create extracts --title "Map files" --notes "Copies of the Geofabrik state files so map builds download fast. Updated monthly."
+  copy:
+    needs: list
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix: ${{ fromJson(needs.list.outputs.matrix) }}
+    steps:
+      - name: Download ${{ matrix.id }}
+        env:
+          URL: ${{ matrix.url }}
+          FILE: ${{ matrix.file }}
+        run: curl -fL --retry 5 --retry-delay 5 --retry-all-errors -A BioHazard-mirror -o "$FILE" "$URL" && ls -l "$FILE"
+      - name: Save the copy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          FILE: ${{ matrix.file }}
+        run: |
+          SIZE=$(stat -c %s "$FILE")
+          if [ "$SIZE" -ge 2147483648 ]; then echo "$FILE is over 2 GB, GitHub cannot hold it; builds will use Geofabrik for it"; exit 0; fi
+          gh release upload extracts "$FILE" --clobber
