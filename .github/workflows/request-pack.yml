@@ -31,7 +31,32 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install osmium
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Install the fast map tool
+        run: sudo apt-get install -y -q osmium-tool || (sudo apt-get update -q && sudo apt-get install -y -q osmium-tool)
+      - name: Find out which map file this place needs
+        id: ex
+        env:
+          P_ID: ${{ inputs.id }}
+          P_NAME: ${{ inputs.name }}
+          P_LAT: ${{ inputs.lat }}
+          P_LON: ${{ inputs.lon }}
+        run: |
+          N=$(python request_pack.py --id "$P_ID" --name "$P_NAME" --lat "$P_LAT" --lon="$P_LON" --print-extract)
+          echo "name=$N" >> "$GITHUB_OUTPUT"
+      - name: Reuse the map file from an earlier build when there is one
+        uses: actions/cache@v4
+        with:
+          path: extracts
+          key: extract-${{ steps.ex.outputs.name }}
+      - name: Download the map files
+        env:
+          P_ID: ${{ inputs.id }}
+          P_NAME: ${{ inputs.name }}
+          P_LAT: ${{ inputs.lat }}
+          P_LON: ${{ inputs.lon }}
+        run: python request_pack.py --id "$P_ID" --name "$P_NAME" --lat "$P_LAT" --lon="$P_LON" --download-only
       - name: Build the pack
         env:
           P_ID: ${{ inputs.id }}
