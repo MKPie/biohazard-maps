@@ -73,17 +73,19 @@ def sample_points(lat, lon, radius_km):
 
 
 def pick_extracts(index, lon, lat, radius_km):
-    """[(pbf url, extract id)]: the smallest extract that covers the center and each sample point, no repeats, center's first."""
+    """[(pbf url, extract id)]: the smallest extract that covers the center and each sample point, no repeats, center's first.
+    Only the center may use a whole-region or whole-country file (id without a slash, like us-midwest). Points out on a lake or
+    over a border would otherwise pull in a multi-gigabyte regional file just to cover water, which cost a 9 minute download."""
     out, seen = [], set()
     for x, y in sample_points(lat, lon, radius_km):
         p = pick_extract(index, x, y)
-        if p is not None and p[1] not in seen:
-            seen.add(p[1])
-            out.append(p)
+        if p is None or p[1] in seen:
+            continue
+        if out and "/" not in (p[1] or ""):
+            continue
+        seen.add(p[1])
+        out.append(p)
     return out
-
-
-MIRROR = "https://github.com/%s/releases/download/extracts/%s"   # our own copy of the state files (mirror-extracts.yml)
 
 
 def _get(url, dest):
@@ -97,28 +99,24 @@ def _get(url, dest):
     os.replace(dest + ".part", dest)
 
 
-def fetch(url, repo="MKPie/biohazard-maps"):
-    """Downloads one map file: from our own copy on GitHub first (fast), from Geofabrik if we do not have it yet."""
+def fetch(url, repo=None):
+    """Downloads one map file from Geofabrik, trying up to 3 times."""
     os.makedirs("extracts", exist_ok=True)
     name = os.path.basename(url)
     dest = "extracts/" + name
     if os.path.exists(dest):
         return dest
     t0 = time.time()
-    sources = [(MIRROR % (repo, name), "our copy"), (url, "Geofabrik")]
-    for src, label in sources:
-        for attempt in (1, 2, 3):
-            try:
-                _get(src, dest)
-                mb = os.path.getsize(dest) / 1e6
-                dt = max(0.001, time.time() - t0)
-                print("downloaded %s from %s: %.0f MB in %.0f s (%.1f MB/s)" % (name, label, mb, dt, mb / dt), flush=True)
-                return dest
-            except Exception as e:
-                print("%s try %d from %s failed: %s" % (name, attempt, label, e), flush=True)
-                if isinstance(e, urllib.error.HTTPError) and e.code == 404:
-                    break
-                time.sleep(2 * attempt)
+    for attempt in (1, 2, 3):
+        try:
+            _get(url, dest)
+            mb = os.path.getsize(dest) / 1e6
+            dt = max(0.001, time.time() - t0)
+            print("downloaded %s: %.0f MB in %.0f s (%.1f MB/s)" % (name, mb, dt, mb / dt), flush=True)
+            return dest
+        except Exception as e:
+            print("%s try %d failed: %s" % (name, attempt, e), flush=True)
+            time.sleep(3 * attempt)
     sys.exit("could not download " + name)
 
 
