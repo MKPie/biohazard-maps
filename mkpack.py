@@ -215,11 +215,15 @@ def main():
         for f in kept:
             h.apply_file(f, locations=True, idx=idx)
         for f in poifiles:
-            ph.apply_file(f, locations=True, idx=idx)
+            ph.apply_file(f, locations=True, idx=idx + "2")
     finally:
         shutil.rmtree(work, ignore_errors=True)
         try:
             os.remove(os.path.join(a.out, ".nodeidx"))
+        except OSError:
+            pass
+        try:
+            os.remove(os.path.join(a.out, ".nodeidx2"))
         except OSError:
             pass
 
