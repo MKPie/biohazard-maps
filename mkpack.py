@@ -6,7 +6,7 @@
       --lat 42.0451 --lon -87.6877 --bbox=-87.80,41.97,-87.60,42.10 \
       --zips 600,602 --places evanston,skokie,wilmette
 
-Writes <out>/<id>.zip (meta.tsv, streets.tsv, areas.tsv) and adds/updates the line for <id> in <out>/regions.tsv.
+Writes <out>/<id>.zip (meta.tsv, streets.tsv, areas.tsv, places.tsv) and adds/updates the line for <id> in <out>/regions.tsv.
 Upload <id>.zip as a GitHub Release file and commit regions.tsv to the repo (see the printed reminder).
 streets.tsv: one line per intersection of two differently named streets: "<street a>|<street b>" TAB lat TAB lon,
   names normalized exactly like the app does (AddressLookup.norm).
@@ -14,6 +14,7 @@ areas.tsv: one area per line: name TAB ring ("lon,lat lon,lat ...") [TAB ring ..
 """
 import argparse, hashlib, math, os, re, shutil, subprocess, sys, tempfile, zipfile
 import osmium
+import bh_places
 
 SUFFIX = {"avenue": "ave", "av": "ave", "ave": "ave", "street": "st", "str": "st", "st": "st", "road": "rd", "rd": "rd",
           "boulevard": "blvd", "blvd": "blvd", "drive": "dr", "dr": "dr", "court": "ct", "ct": "ct", "place": "pl", "pl": "pl",
@@ -64,7 +65,7 @@ def clip(pbfs, bbox, workdir):
     """Cut the big extract(s) down to the bounding box and keep only what a pack needs (roads, area borders) with the fast osmium
     command line tool, so the slow Python pass reads a small file. Without that tool the extracts are read as they are."""
     if shutil.which("osmium") is None:
-        return list(pbfs)
+        return list(pbfs), list(pbfs)
     box = "%f,%f,%f,%f" % tuple(bbox)
     parts = []
     for i, p in enumerate(pbfs):
@@ -78,7 +79,14 @@ def clip(pbfs, bbox, workdir):
     kept = os.path.join(workdir, "kept.osm.pbf")
     subprocess.run(["osmium", "tags-filter", "--overwrite", "-o", kept, merged,
                     "w/highway", "r/boundary=administrative", "w/place", "r/place", "n/place=neighbourhood,suburb,quarter"], check=True)
-    return [kept]
+    # Places drivers go to (hospitals, airports, colleges...) are kept in their own small file, with the nodes they need.
+    pois = os.path.join(workdir, "pois.osm.pbf")
+    subprocess.run(["osmium", "tags-filter", "--overwrite", "-o", pois, merged,
+                    "nwr/amenity=hospital,university,college,bus_station,casino,theatre,arts_centre,conference_centre,exhibition_centre",
+                    "nwr/healthcare=hospital", "nwr/aeroway=aerodrome,terminal", "nwr/railway=station", "nwr/public_transport=station",
+                    "nwr/shop=mall", "nwr/leisure=stadium", "nwr/building=stadium",
+                    "nwr/tourism=museum,gallery,zoo,aquarium,theme_park,attraction,hotel"], check=True)
+    return [kept], [pois]
 
 
 def key(a, b):
@@ -206,8 +214,12 @@ def main():
     os.makedirs(a.out, exist_ok=True)
     work = tempfile.mkdtemp(prefix="mkpack")
     try:
-        for f in clip(a.pbf, bbox, work):
+        ph = bh_places.Places(bbox)
+        kept, poifiles = clip(a.pbf, bbox, work)
+        for f in kept:
             h.apply_file(f, locations=True, idx=idx)
+        for f in poifiles:
+            ph.apply_file(f, locations=True, idx=idx)
     finally:
         shutil.rmtree(work, ignore_errors=True)
         try:
@@ -248,6 +260,9 @@ def main():
         put(z, "streets.tsv", streets)
         if areas:
             put(z, "areas.tsv", areas)
+        prow = sorted(bh_places.dedupe(ph.found), key=lambda r: (r[1], r[0].lower()))
+        if prow:
+            put(z, "places.tsv", "".join("%s\t%s\t%.5f\t%.5f\n" % (n.replace("\t", " ").replace("\n", " "), c, la, lo) for n, c, la, lo in prow))
     data = open(zpath, "rb").read()
     sha = hashlib.sha256(data).hexdigest()
     url = "https://github.com/%s/releases/download/%s/%s.zip" % (a.repo, a.tag, a.id)
