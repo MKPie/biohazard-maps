@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2283800	37b02c168852016e6d269856009bc5a09935e72324efa036be19030349024591	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
-san-diego-ca	San Diego, California	none	32.7157062	-117.1638284	San Diego, California	1094781	f3e96a22359c97adbf79a7d9585ed9f69dbb119baa8434941e569870e3aa3e1b	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-diego-ca.zip		san diego,san diego
 houston-tx	Houston, Texas	none	29.7589382	-95.3676974	Houston, Texas	3463580	f7abca7ce862de7c13ea1fe96cba741a6b7a8fe31055f01e5aeff5b59c06f20c	https://github.com/MKPie/biohazard-maps/releases/download/packs/houston-tx.zip		houston,harris
 new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5354092	f33867be5099279f56c35c4ccabf89689eb68845ffacfdd27e49ea7927db8259	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 las-vegas-nv	Las Vegas, Nevada	none	36.1674263	-115.1484131	Las Vegas, Nevada	1178071	97ab3d384cd37bfc2234a2e41b3109ecefbc17701633f0a08e61aaaff50ef2e3	https://github.com/MKPie/biohazard-maps/releases/download/packs/las-vegas-nv.zip		las vegas,clark
@@ -63,3 +62,4 @@ atlanta-ga	Atlanta, Georgia	none	33.7544657	-84.3898151	Atlanta, Georgia	3357726
 san-antonio-tx	San Antonio, Texas	none	29.4246002	-98.4951405	San Antonio, Texas	1452883	06ceedf3cbf521119dd7b4aaec1b374cf5e06e9ffcab644347b401b7ebaeb02a	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-antonio-tx.zip		san antonio,bexar
 indianapolis-in	Indianapolis, Indiana	none	39.7683331	-86.1583502	Indianapolis, Indiana	1641644	5ad19fae5a42c6728317b77f0506fe270c11a77aa771239a23d85ecd2084d707	https://github.com/MKPie/biohazard-maps/releases/download/packs/indianapolis-in.zip		indianapolis,marion
 washington-dc	Washington, District of Columbia	none	38.8950982	-77.0363849	Washington, District of Columbia	4187645	ed2a609c49c8213e8a6a8e3f4170b557cf8a936f06b77d33d9ab191e55ace63a	https://github.com/MKPie/biohazard-maps/releases/download/packs/washington-dc.zip		washington
+san-diego-ca	San Diego, California	none	32.7157062	-117.1638284	San Diego, California	1265782	bab185d9618a39b1fafa8c37fbaca506b7a8f7f7e8709c83d2cf8779ec44dbce	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-diego-ca.zip		san diego,san diego
