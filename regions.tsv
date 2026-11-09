@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2283800	37b02c168852016e6d269856009bc5a09935e72324efa036be19030349024591	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
-el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	514351	fe3291d7cb7d0e9621069f6e4edd06fb79e6119bd1a8b0e175da2ba87d518bed	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	4005102	4201306c677ddea1f9a71c6859f279d4f339efc47fd7de946dd242504b02ab5e	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
 gary-in	Gary, Indiana	none	41.6020962	-87.3370646	Gary, Indiana	2799621	32a7b252a98eeb20debf8f551129b6709550679814b16fcd92e8328961138f9c	https://github.com/MKPie/biohazard-maps/releases/download/packs/gary-in.zip		gary,lake
 phoenix-az	Phoenix, Arizona	none	33.4484367	-112.074141	Phoenix, Arizona	2240066	5aabf1a2e0825e18b7a391c4a60059649567cc4c549af9dd9d6af37d256101ed	https://github.com/MKPie/biohazard-maps/releases/download/packs/phoenix-az.zip		phoenix,maricopa
@@ -63,3 +62,4 @@ boise-id	Boise, Idaho	none	43.6166163	-116.200886	Boise, Idaho	684712	1f19d1f121
 miami-fl	Miami, Florida	none	25.7741566	-80.1935973	Miami, Florida	1361077	2cf90be4f3b2fea685c8a5742db042fdd4e456c4ea7549cb24dd0b3548715135	https://github.com/MKPie/biohazard-maps/releases/download/packs/miami-fl.zip		miami,miami-dade
 tampa-fl	Tampa, Florida	none	27.9449854	-82.4583107	Tampa, Florida	2430372	0e59ed333c89ab49a7b6d550628d5d023d18f2b4d85191878503e416256b501b	https://github.com/MKPie/biohazard-maps/releases/download/packs/tampa-fl.zip		tampa,hillsborough
 providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	4003208	9b192d9b255e7c1ab2a04a24df98f0b63d07e5c9b0cf07b787ab3fa8c0b05ca0	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
+el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	540664	fe0593115b91034fc689a4fc3a4a69d50d07f1079ee8bacc4d1a2ffb70d28834	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
