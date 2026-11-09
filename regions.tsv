@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	3540169	69e8200d591c9ac286e94e28628f36feacdf0a6967d9b17082f99913f05c26d8	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
 virginia-beach-va	Virginia Beach, Virginia	none	36.8496579	-75.9760751	Virginia Beach, Virginia	834769	1caa2296b282171831cd795f393f0c4b3c6351c08594e6df554b2abaa3e65373	https://github.com/MKPie/biohazard-maps/releases/download/packs/virginia-beach-va.zip		virginia beach
 providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	3625232	141861d6ef12745d55103aaab11e2d6f350552af7d6a5be4c0e9352636fbfafb	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
 buffalo-ny	Buffalo, New York	none	42.8864163	-78.8781493	Buffalo, New York	486705	671a5afb5f708d689b750b0f52a8881d10edcadeb5585e4e260a23ea6869b1c8	https://github.com/MKPie/biohazard-maps/releases/download/packs/buffalo-ny.zip		buffalo,erie
@@ -63,3 +62,4 @@ fresno-ca	Fresno, California	none	36.7394421	-119.78483	Fresno, California	65632
 albuquerque-nm	Albuquerque, New Mexico	none	35.0841034	-106.650985	Albuquerque, New Mexico	660964	4828f391c56c00390731cc8feed87087d54b22aecf068a8d00c07f60dee2922c	https://github.com/MKPie/biohazard-maps/releases/download/packs/albuquerque-nm.zip		albuquerque,bernalillo
 omaha-ne	Omaha, Nebraska	none	41.2587459	-95.9383758	Omaha, Nebraska	836130	07e87555402e26c8dfdc982112bb0d9a95449e717d03d3ee95db01d1db42a211	https://github.com/MKPie/biohazard-maps/releases/download/packs/omaha-ne.zip		omaha,douglas
 milwaukee-wi	Milwaukee, Wisconsin	none	43.0386475	-87.9090751	Milwaukee, Wisconsin	1715329	d32b72af4f093b8d180544992e9ff1a54c551177b62e3da1632df67411460e30	https://github.com/MKPie/biohazard-maps/releases/download/packs/milwaukee-wi.zip		milwaukee,milwaukee
+baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	3552859	842072cedc814e908d9fb06b3e63b5033d4da2c00757769e7ecf07bc54108e31	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
