@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	3997759	32f3a459287c0ad4196c5af4238c3ba7b20c94ef0642f3d0cb43ae00863a9116	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
-el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	512808	deeb4f2ca27118b44d5df3129f442658d7301735b0af822ea4f244050c8794de	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
 niles-il	Niles, Illinois	none	42.0289319	-87.8122348	Niles, Illinois	3735664	70adc8306df22bbe27fea5eb3bf326a5dbeaee1274cf56c487afe2853c1df4a9	https://github.com/MKPie/biohazard-maps/releases/download/packs/niles-il.zip	607	niles,cook
 des-plaines-il	Des Plaines, Illinois	none	42.0415823	-87.8873916	Des Plaines, Illinois	3753433	b65c9308e9c172834960b6e3afbf4a5b788b1ceb8e196b01d5f08ed8c7962e24	https://github.com/MKPie/biohazard-maps/releases/download/packs/des-plaines-il.zip	600	des plaines,cook
 gary-in	Gary, Indiana	none	41.6020962	-87.3370646	Gary, Indiana	2785130	585fe3694f785a8446008cad363ae01c9fcd6a809c742971eb938b8a074d9d90	https://github.com/MKPie/biohazard-maps/releases/download/packs/gary-in.zip		gary,lake
@@ -63,3 +62,4 @@ albuquerque-nm	Albuquerque, New Mexico	none	35.0841034	-106.650985	Albuquerque, 
 new-orleans-la	New Orleans, Louisiana	none	29.9574657	-90.0629493	New Orleans, Louisiana	816643	b2d55a1adcb045c2409bff28af0c3259ce0b80a2ea7d81113e5df705d7c3f541	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-orleans-la.zip		new orleans,orleans parish
 boise-id	Boise, Idaho	none	43.6166163	-116.200886	Boise, Idaho	645179	c06e24d392f687ec291b1a958ddd47dd0f18e3b31e2d064a3751d41da9299e37	https://github.com/MKPie/biohazard-maps/releases/download/packs/boise-id.zip		boise,ada
 hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2283800	37b02c168852016e6d269856009bc5a09935e72324efa036be19030349024591	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
+el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	514351	fe3291d7cb7d0e9621069f6e4edd06fb79e6119bd1a8b0e175da2ba87d518bed	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
