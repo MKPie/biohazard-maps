@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-tampa-fl	Tampa, Florida	none	27.9449854	-82.4583107	Tampa, Florida	2430372	0e59ed333c89ab49a7b6d550628d5d023d18f2b4d85191878503e416256b501b	https://github.com/MKPie/biohazard-maps/releases/download/packs/tampa-fl.zip		tampa,hillsborough
 providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	4003208	9b192d9b255e7c1ab2a04a24df98f0b63d07e5c9b0cf07b787ab3fa8c0b05ca0	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
 el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	540664	fe0593115b91034fc689a4fc3a4a69d50d07f1079ee8bacc4d1a2ffb70d28834	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
 san-francisco-ca	San Francisco, California	none	37.7879363	-122.4075201	San Francisco, California	3134392	acdd81babf9fda9f4d98feff1938857a72ff9ad4f1beb4aaa6e2ca40d8ec4bcf	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-francisco-ca.zip		san francisco
@@ -63,3 +62,4 @@ cincinnati-oh	Cincinnati, Ohio	none	39.1012809	-84.5127405	Cincinnati, Ohio	1710
 niles-il	Niles, Illinois	none	42.0289319	-87.8122348	Niles, Illinois	4581929	ae644219c2daa7b258d8f54e662653923d20008d5ee800ea0d1aea038599c35e	https://github.com/MKPie/biohazard-maps/releases/download/packs/niles-il.zip	607	niles,cook
 miami-fl	Miami, Florida	none	25.7741566	-80.1935973	Miami, Florida	1456852	ade7183d373338d84784bb5d38a5e8ffbaeffbc6763eb9bb3934e6615808a12e	https://github.com/MKPie/biohazard-maps/releases/download/packs/miami-fl.zip		miami,miami-dade
 boise-id	Boise, Idaho	none	43.6166163	-116.200886	Boise, Idaho	731834	509779f3ddf36c9ab01a16ccbe962e0bd3181535b6b4550391f8989e4ecfd098	https://github.com/MKPie/biohazard-maps/releases/download/packs/boise-id.zip		boise,ada
+tampa-fl	Tampa, Florida	none	27.9449854	-82.4583107	Tampa, Florida	2558466	81f81541dfc36ee324d34d5c1ac1dc74f181504340112bccf4383a2267c2a3da	https://github.com/MKPie/biohazard-maps/releases/download/packs/tampa-fl.zip		tampa,hillsborough
