@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-san-diego-ca	San Diego, California	none	32.7157062	-117.1638284	San Diego, California	1265782	bab185d9618a39b1fafa8c37fbaca506b7a8f7f7e8709c83d2cf8779ec44dbce	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-diego-ca.zip		san diego,san diego
 hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2532831	10c3cc456dd203f80452e85f47c838d67658c905da74462bcd7e51cf4380f89b	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
 new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	6525228	d688d01d3ab08ac1f962f2d809b505231cb29c51db4ccaf34b0bd87a0369000a	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1532026	31a627d3f23f64173760adc7123710c7cf6a7ee9398be49714ca7ea104d8919a	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
@@ -63,3 +62,4 @@ saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Mis
 pittsburgh-pa	Pittsburgh, Pennsylvania	none	40.4406968	-80.0025666	Pittsburgh, Pennsylvania	3088407	91936b3a96a33197e839ade320f844ab0f872da3ebaa72581d064ec97ed783c7	https://github.com/MKPie/biohazard-maps/releases/download/packs/pittsburgh-pa.zip		pittsburgh,allegheny
 denver-co	Denver, Colorado	none	39.7392364	-104.984862	Denver, Colorado	2094015	7ed336079107a53138ba74ef52d70dd677ae32c070423b48387161580855c633	https://github.com/MKPie/biohazard-maps/releases/download/packs/denver-co.zip		denver
 albuquerque-nm	Albuquerque, New Mexico	none	35.0841034	-106.650985	Albuquerque, New Mexico	803959	d69eb1660fe21f3e17ca3812dad7f524695d195105a135525daeae9ed1f6b9bf	https://github.com/MKPie/biohazard-maps/releases/download/packs/albuquerque-nm.zip		albuquerque,bernalillo
+san-diego-ca	San Diego, California	none	32.7157062	-117.1638284	San Diego, California	1360756	b2f5e9bca9178957094aa5f1e782e61d58a7fd7a0e6066af169a769ebb26c57d	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-diego-ca.zip		san diego,san diego
