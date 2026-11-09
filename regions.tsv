@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	3540169	69e8200d591c9ac286e94e28628f36feacdf0a6967d9b17082f99913f05c26d8	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
-portland-or	Portland, Oregon	none	45.5202471	-122.674194	Portland, Oregon	1612163	61839d3edfe123e74db6da988076fe23b4fc50daf1b00160bec3d4987c2b402b	https://github.com/MKPie/biohazard-maps/releases/download/packs/portland-or.zip		portland,multnomah
 cincinnati-oh	Cincinnati, Ohio	none	39.1012809	-84.5127405	Cincinnati, Ohio	1569207	e42189189f79d67d2f75225afe894d9ab9584e53d584ad204beb560195159f74	https://github.com/MKPie/biohazard-maps/releases/download/packs/cincinnati-oh.zip		cincinnati,hamilton
 raleigh-nc	Raleigh, North Carolina	none	35.7803977	-78.6390989	Raleigh, North Carolina	2728203	27e72af3089f8f387dd84132cc0e307c8eb1b6b23d4594fa5a2fc56b1d6a094f	https://github.com/MKPie/biohazard-maps/releases/download/packs/raleigh-nc.zip		raleigh,wake
 richmond-va	Richmond, Virginia	none	37.5385087	-77.43428	Richmond, Virginia	939015	5656326bf0aefc0f41d6b935d08b0ae30dcf1935966c9b3ace62eed218528f75	https://github.com/MKPie/biohazard-maps/releases/download/packs/richmond-va.zip		richmond
@@ -63,3 +62,4 @@ nashville-tn	Nashville, Tennessee	none	36.1622767	-86.7742984	Nashville, Tenness
 denver-co	Denver, Colorado	none	39.7392364	-104.984862	Denver, Colorado	1641636	3365e3dd6ee0d18d88e686ab1ea8957b555b39c989704c816716a6aee15a5b91	https://github.com/MKPie/biohazard-maps/releases/download/packs/denver-co.zip		denver
 louisville-ky	Louisville, Kentucky	none	38.2542376	-85.759407	Louisville, Kentucky	1026155	47b20fc09c99c708847ffbb2329c92e9181a1d256e6a393c40c8902cf032ac30	https://github.com/MKPie/biohazard-maps/releases/download/packs/louisville-ky.zip		louisville,jefferson
 birmingham-al	Birmingham, Alabama	none	33.5206824	-86.8024326	Birmingham, Alabama	1738124	7aa01e7e2903f53717f9466aa0fd9d128f997f6da3fb36d65c3fd5c28d184859	https://github.com/MKPie/biohazard-maps/releases/download/packs/birmingham-al.zip		birmingham,jefferson
+portland-or	Portland, Oregon	none	45.5202471	-122.674194	Portland, Oregon	1617266	0aaf6efbf62f55b08623c1c013a7d6259ebc789c6a067623c5262ac122f00921	https://github.com/MKPie/biohazard-maps/releases/download/packs/portland-or.zip		portland,multnomah
