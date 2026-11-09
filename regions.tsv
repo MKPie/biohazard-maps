@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	3997759	32f3a459287c0ad4196c5af4238c3ba7b20c94ef0642f3d0cb43ae00863a9116	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
-cincinnati-oh	Cincinnati, Ohio	none	39.1012809	-84.5127405	Cincinnati, Ohio	1567031	0c4bd0abc02bb29863269067248d76dee464c89339a1cb57ddd6ef556736e199	https://github.com/MKPie/biohazard-maps/releases/download/packs/cincinnati-oh.zip		cincinnati,hamilton
 kansas-city-mo	Kansas City, Missouri	none	39.100105	-94.5781416	Kansas City, Missouri	1290360	529561871f21ce33041c4e60fb8158fc81c6086fa4ef660228e01288d8f28427	https://github.com/MKPie/biohazard-maps/releases/download/packs/kansas-city-mo.zip		kansas city,jackson
 columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1418688	725847347ef9925e2551b0d2bb950b31a9b57c9014065faa3cac416054d6fa9d	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
 indianapolis-in	Indianapolis, Indiana	none	39.7683331	-86.1583502	Indianapolis, Indiana	1524702	d9c6826fc0fe0d35238bf763defd78523c3bc014010c1a04630555cbdff6b799	https://github.com/MKPie/biohazard-maps/releases/download/packs/indianapolis-in.zip		indianapolis,marion
@@ -63,3 +62,4 @@ charlotte-nc	Charlotte, North Carolina	none	35.2272086	-80.8430827	Charlotte, No
 portland-or	Portland, Oregon	none	45.5202471	-122.674194	Portland, Oregon	1612163	61839d3edfe123e74db6da988076fe23b4fc50daf1b00160bec3d4987c2b402b	https://github.com/MKPie/biohazard-maps/releases/download/packs/portland-or.zip		portland,multnomah
 pittsburgh-pa	Pittsburgh, Pennsylvania	none	40.4406968	-80.0025666	Pittsburgh, Pennsylvania	2736253	7da573213431a8c050cecdf86534ad2b01859613e83958f8a8daecceb6c2ae2e	https://github.com/MKPie/biohazard-maps/releases/download/packs/pittsburgh-pa.zip		pittsburgh,allegheny
 las-vegas-nv	Las Vegas, Nevada	none	36.1674263	-115.1484131	Las Vegas, Nevada	1173342	631b63f1d6a9ff83586a275b551e97bc684d60c8fd7450c477f20a0d13433a73	https://github.com/MKPie/biohazard-maps/releases/download/packs/las-vegas-nv.zip		las vegas,clark
+cincinnati-oh	Cincinnati, Ohio	none	39.1012809	-84.5127405	Cincinnati, Ohio	1569207	e42189189f79d67d2f75225afe894d9ab9584e53d584ad204beb560195159f74	https://github.com/MKPie/biohazard-maps/releases/download/packs/cincinnati-oh.zip		cincinnati,hamilton
