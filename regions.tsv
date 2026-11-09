@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2532831	10c3cc456dd203f80452e85f47c838d67658c905da74462bcd7e51cf4380f89b	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
 new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	6525228	d688d01d3ab08ac1f962f2d809b505231cb29c51db4ccaf34b0bd87a0369000a	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 cleveland-oh	Cleveland, Ohio	none	41.4996574	-81.6936772	Cleveland, Ohio	1850336	813a46ad03e10791c556ef7722baf9a926c1e18df1da1050948dbaef5fe0e9dc	https://github.com/MKPie/biohazard-maps/releases/download/packs/cleveland-oh.zip		cleveland,cuyahoga
 louisville-ky	Louisville, Kentucky	none	38.2542376	-85.759407	Louisville, Kentucky	1100835	e86c2cfab4266807e9dc66d196cbee5cc31ece6b6436f81ccbd81c4b6c6e92bc	https://github.com/MKPie/biohazard-maps/releases/download/packs/louisville-ky.zip		louisville,jefferson
@@ -63,3 +62,4 @@ albuquerque-nm	Albuquerque, New Mexico	none	35.0841034	-106.650985	Albuquerque, 
 san-diego-ca	San Diego, California	none	32.7157062	-117.1638284	San Diego, California	1360756	b2f5e9bca9178957094aa5f1e782e61d58a7fd7a0e6066af169a769ebb26c57d	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-diego-ca.zip		san diego,san diego
 fresno-ca	Fresno, California	none	36.7394421	-119.78483	Fresno, California	785739	dc838c760ce7b7fc2cec7372cb49e2abdcee5ddd204e5c87c219485881b19c3b	https://github.com/MKPie/biohazard-maps/releases/download/packs/fresno-ca.zip		fresno,fresno
 columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1687559	8c61b03c6093cf9023a611efabef257b4f4d1aeb315d839626044fa9c3079f9f	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
+hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2819072	1f54397769c553235c46161046fcb180930d2757fb017f072fdafbf8fc275e08	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
