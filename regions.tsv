@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2018520	24a534ea46300835f969b66b65dd35585f286ae9e4f7f3b8d641c61719bf095d	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
-columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1426290	78f2031a234122fc5e961ce8d677df99ab082f2cf33a2f911bdba3193d919b0f	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
 austin-tx	Austin, Texas	none	30.2649261	-97.7474086	Austin, Texas	1543132	aa45ffe2feab0224032f293b0f2b8433aa1147b4ab8f9d227bbb3b2e2b858da3	https://github.com/MKPie/biohazard-maps/releases/download/packs/austin-tx.zip		austin,travis
 charlotte-nc	Charlotte, North Carolina	none	35.2272086	-80.8430827	Charlotte, North Carolina	2449180	a9db3a121a2943668f133835cd451747c5f47bd932bcebeb59c5aab842f50a51	https://github.com/MKPie/biohazard-maps/releases/download/packs/charlotte-nc.zip		charlotte,mecklenburg
 cleveland-oh	Cleveland, Ohio	none	41.4996574	-81.6936772	Cleveland, Ohio	1646028	32f8d2dccb90d68d11bbe089a66ffb1a554478f8472dc44debd6d2c5d708fc60	https://github.com/MKPie/biohazard-maps/releases/download/packs/cleveland-oh.zip		cleveland,cuyahoga
@@ -63,3 +62,4 @@ tucson-az	Tucson, Arizona	none	32.2228765	-110.974847	Tucson, Arizona	673600	dca
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4344856	5b3f8765d12bbe423f1a3dffbbbe438dd465cdf8d686479b878276245d05db00	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
 nashville-tn	Nashville, Tennessee	none	36.1622767	-86.7742984	Nashville, Tennessee	1557018	90ad1e37ca7843794cbcdb590128e9458f1526474be5e11c4fb8e8b955551eab	https://github.com/MKPie/biohazard-maps/releases/download/packs/nashville-tn.zip		nashville,davidson
 tulsa-ok	Tulsa, Oklahoma	none	36.1563122	-95.9927516	Tulsa, Oklahoma	916938	15a38ddca0eebb56b41d145805bb08738f16bdc7d3a22cea20f81e432ba9d5c3	https://github.com/MKPie/biohazard-maps/releases/download/packs/tulsa-ok.zip		tulsa,tulsa
+columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1532026	31a627d3f23f64173760adc7123710c7cf6a7ee9398be49714ca7ea104d8919a	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
