@@ -81,11 +81,7 @@ def clip(pbfs, bbox, workdir):
                     "w/highway", "r/boundary=administrative", "w/place", "r/place", "n/place=neighbourhood,suburb,quarter"], check=True)
     # Places drivers go to (hospitals, airports, colleges...) are kept in their own small file, with the nodes they need.
     pois = os.path.join(workdir, "pois.osm.pbf")
-    subprocess.run(["osmium", "tags-filter", "--overwrite", "-o", pois, merged,
-                    "nwr/amenity=hospital,university,college,bus_station,casino,theatre,arts_centre,conference_centre,exhibition_centre",
-                    "nwr/healthcare=hospital", "nwr/aeroway=aerodrome,terminal", "nwr/railway=station", "nwr/public_transport=station",
-                    "nwr/shop=mall", "nwr/leisure=stadium", "nwr/building=stadium",
-                    "nwr/tourism=museum,gallery,zoo,aquarium,theme_park,attraction,hotel"], check=True)
+    subprocess.run(["osmium", "tags-filter", "--overwrite", "-o", pois, merged] + bh_places.POI_FILTERS, check=True)
     return [kept], [pois]
 
 

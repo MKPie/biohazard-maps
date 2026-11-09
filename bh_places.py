@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pulls the places a rideshare driver goes to (airports, hospitals, colleges, malls, stadiums, attractions, hotels, train stations...)
+"""Pulls the places a rideshare driver goes to (airports, hospitals, restaurants, shops, gas stations, parks, schools, offices, hotels, train stations...)
 out of OpenStreetMap files, inside one box. Writes places.tsv: name TAB category TAB lat TAB lon.
 
   python3 bh_places.py --bbox=-88.60,41.15,-86.65,42.60 --out chicago_places.tsv  file1.osm.pbf file2.osm.pbf
@@ -18,8 +18,13 @@ def classify(t):
     if aero == "terminal":
         return "Airport terminal"
     amen = t.get("amenity")
-    if amen == "hospital" or t.get("healthcare") == "hospital":
+    heal = t.get("healthcare")
+    if amen == "hospital" or heal == "hospital":
         return "Hospital"
+    if heal == "urgent_care" or (amen == "clinic" and "urgent" in (t.get("name") or "").lower()):
+        return "Urgent care"
+    if amen in ("clinic", "doctors", "dentist") or heal in ("clinic", "doctor", "dentist"):
+        return "Clinic"
     if amen in ("university", "college"):
         return "College"
     if amen == "bus_station":
@@ -49,6 +54,37 @@ def classify(t):
         return "Attraction"
     if tour == "hotel":
         return "Hotel"
+    if amen in ("restaurant", "food_court"):
+        return "Restaurant"
+    if amen == "fast_food":
+        return "Fast food"
+    if amen == "cafe":
+        return "Cafe"
+    if amen in ("bar", "pub", "nightclub", "biergarten"):
+        return "Bar"
+    if amen == "fuel":
+        return "Gas station"
+    if amen in ("school", "kindergarten"):
+        return "School"
+    if amen == "place_of_worship":
+        return "Place of worship"
+    if amen == "grave_yard" or t.get("landuse") == "cemetery":
+        return "Cemetery"
+    lei = t.get("leisure")
+    if lei in ("park", "nature_reserve", "garden"):
+        return "Park"
+    if lei == "golf_course":
+        return "Golf course"
+    if lei == "marina":
+        return "Marina"
+    if t.get("natural") == "beach":
+        return "Beach"
+    if t.get("building") == "apartments":
+        return "Apartments"
+    if t.get("office") or t.get("building") == "office":
+        return "Office"
+    if t.get("shop"):
+        return "Shop"
     return None
 
 
@@ -96,13 +132,19 @@ def meters(a, b, c, d):
     return 2 * r * math.asin(math.sqrt(h))
 
 
+BIG = {"Airport", "Airport terminal", "Hospital", "College", "Bus station", "Casino", "Theater", "Convention center", "Train station",
+       "Mall", "Stadium", "Museum", "Zoo and aquarium", "Theme park", "Attraction", "Park", "Golf course", "Cemetery", "Marina", "Beach"}
+
+
 def dedupe(rows):
-    """Same name and category within 400 m is one place (a building and its entrance node, or two files)."""
+    """Same name and category close together is one place (a building and its entrance node, or two files).
+    Big places count as one within 400 m; shops, restaurants and the like within 60 m (two real branches are never that close)."""
     out = []
     seen = {}
     for name, cat, lat, lon in rows:
         k = (name.lower(), cat)
-        if any(meters(lat, lon, la, lo) < 400.0 for la, lo in seen.get(k, [])):
+        lim = 400.0 if cat in BIG else 60.0
+        if any(meters(lat, lon, la, lo) < lim for la, lo in seen.get(k, [])):
             continue
         seen.setdefault(k, []).append((lat, lon))
         out.append((name, cat, lat, lon))
@@ -110,9 +152,11 @@ def dedupe(rows):
 
 
 POI_FILTERS = [
-    "nwr/amenity=hospital,university,college,bus_station,casino,theatre,arts_centre,conference_centre,exhibition_centre",
-    "nwr/healthcare=hospital", "nwr/aeroway=aerodrome,terminal", "nwr/railway=station", "nwr/public_transport=station",
-    "nwr/shop=mall", "nwr/leisure=stadium", "nwr/building=stadium",
+    "nwr/amenity=hospital,university,college,bus_station,casino,theatre,arts_centre,conference_centre,exhibition_centre,"
+    "clinic,doctors,dentist,restaurant,food_court,fast_food,cafe,bar,pub,nightclub,biergarten,fuel,school,kindergarten,place_of_worship,grave_yard",
+    "nwr/healthcare=hospital,urgent_care,clinic,doctor,dentist", "nwr/aeroway=aerodrome,terminal", "nwr/railway=station", "nwr/public_transport=station",
+    "nwr/shop", "nwr/leisure=stadium,park,nature_reserve,garden,golf_course,marina", "nwr/natural=beach", "nwr/landuse=cemetery",
+    "nwr/building=stadium,apartments,office", "nwr/office",
     "nwr/tourism=museum,gallery,zoo,aquarium,theme_park,attraction,hotel",
 ]
 
