@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5354092	f33867be5099279f56c35c4ccabf89689eb68845ffacfdd27e49ea7927db8259	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
-oklahoma-city-ok	Oklahoma City, Oklahoma	none	35.4729886	-97.5170536	Oklahoma City, Oklahoma	929143	c51b02a5d47305c4cab0611070ebfcc69f0169fcce17e9448b85dde5dfbf3807	https://github.com/MKPie/biohazard-maps/releases/download/packs/oklahoma-city-ok.zip		oklahoma city,oklahoma
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4050765	667c47d8bdfd2173318f274a5c83ee961b46931766f13a824ab85e2c56da759c	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
 saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2018520	24a534ea46300835f969b66b65dd35585f286ae9e4f7f3b8d641c61719bf095d	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
 columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1426290	78f2031a234122fc5e961ce8d677df99ab082f2cf33a2f911bdba3193d919b0f	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
@@ -63,3 +62,4 @@ hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecti
 las-vegas-nv	Las Vegas, Nevada	none	36.1674263	-115.1484131	Las Vegas, Nevada	1244014	9a0d31c51f56b27ac3335ce8f59fb64c71ef31efb2863197de7e8275181ae390	https://github.com/MKPie/biohazard-maps/releases/download/packs/las-vegas-nv.zip		las vegas,clark
 san-jose-ca	San Jose, California	none	37.3361663	-121.890591	San Jose, California	3041165	86bdf4916f852307575452ce71733be97e3e5057a6546e098ff9fb2cf4bbd3d1	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-jose-ca.zip		san jose,santa clara
 houston-tx	Houston, Texas	none	29.7589382	-95.3676974	Houston, Texas	3709893	aa0c365140439887fc8376cf4ba9479be6018f0bfae1edc9961d15d28a523b35	https://github.com/MKPie/biohazard-maps/releases/download/packs/houston-tx.zip		houston,harris
+oklahoma-city-ok	Oklahoma City, Oklahoma	none	35.4729886	-97.5170536	Oklahoma City, Oklahoma	990579	9795b0dad6b1cf482613bd454c9b426f9ca6f4e4ba13303893033fc59be9f97b	https://github.com/MKPie/biohazard-maps/releases/download/packs/oklahoma-city-ok.zip		oklahoma city,oklahoma
