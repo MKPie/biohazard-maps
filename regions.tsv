@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	3540169	69e8200d591c9ac286e94e28628f36feacdf0a6967d9b17082f99913f05c26d8	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
-richmond-va	Richmond, Virginia	none	37.5385087	-77.43428	Richmond, Virginia	939015	5656326bf0aefc0f41d6b935d08b0ae30dcf1935966c9b3ace62eed218528f75	https://github.com/MKPie/biohazard-maps/releases/download/packs/richmond-va.zip		richmond
 virginia-beach-va	Virginia Beach, Virginia	none	36.8496579	-75.9760751	Virginia Beach, Virginia	834769	1caa2296b282171831cd795f393f0c4b3c6351c08594e6df554b2abaa3e65373	https://github.com/MKPie/biohazard-maps/releases/download/packs/virginia-beach-va.zip		virginia beach
 providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	3625232	141861d6ef12745d55103aaab11e2d6f350552af7d6a5be4c0e9352636fbfafb	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
 milwaukee-wi	Milwaukee, Wisconsin	none	43.0386475	-87.9090751	Milwaukee, Wisconsin	1709461	6900969eaab278697dd747e1cc7803421b59abbda1b33e33b1894cdd89975a5b	https://github.com/MKPie/biohazard-maps/releases/download/packs/milwaukee-wi.zip		milwaukee,milwaukee
@@ -63,3 +62,4 @@ tulsa-ok	Tulsa, Oklahoma	none	36.1563122	-95.9927516	Tulsa, Oklahoma	848283	897b
 raleigh-nc	Raleigh, North Carolina	none	35.7803977	-78.6390989	Raleigh, North Carolina	2733826	374c20c0d86960472f5fad713aa72f14edf31eafa3656885a716313811c606b3	https://github.com/MKPie/biohazard-maps/releases/download/packs/raleigh-nc.zip		raleigh,wake
 honolulu-hi	Honolulu, Hawaii	none	21.304547	-157.855676	Honolulu, Hawaii	252079	23d0f52965cbf48d366bd14ad67c5bf245dd70aabb4a693f132eae2ba78adf37	https://github.com/MKPie/biohazard-maps/releases/download/packs/honolulu-hi.zip		honolulu,honolulu
 city-of-rochester-ny	City of Rochester, New York	none	43.157285	-77.615214	City of Rochester, New York	532962	7ff068046c1cb8cb90c424b95ee16eb6d0d719b82a146dafae9b674636cee9d0	https://github.com/MKPie/biohazard-maps/releases/download/packs/city-of-rochester-ny.zip		city of rochester,monroe
+richmond-va	Richmond, Virginia	none	37.5385087	-77.43428	Richmond, Virginia	942986	bb453670f45774b08a3d4b29b23188f86417199f0af2249896f500b757dbcf23	https://github.com/MKPie/biohazard-maps/releases/download/packs/richmond-va.zip		richmond
