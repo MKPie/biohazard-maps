@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2283800	37b02c168852016e6d269856009bc5a09935e72324efa036be19030349024591	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
-los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	4005102	4201306c677ddea1f9a71c6859f279d4f339efc47fd7de946dd242504b02ab5e	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
 san-diego-ca	San Diego, California	none	32.7157062	-117.1638284	San Diego, California	1094781	f3e96a22359c97adbf79a7d9585ed9f69dbb119baa8434941e569870e3aa3e1b	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-diego-ca.zip		san diego,san diego
 des-plaines-il	Des Plaines, Illinois	none	42.0415823	-87.8873916	Des Plaines, Illinois	3769567	fc68b9f04683c1a37b916b6d0521cfb4f8cbff60c0682463f72799a9445238b8	https://github.com/MKPie/biohazard-maps/releases/download/packs/des-plaines-il.zip	600	des plaines,cook
 riverside-ca	Riverside, California	none	33.9732079	-117.3730926	Riverside, California	3760419	eeebc546912d0c4678c28f05611a7266669972399fda41977b7e2a92bea5e3de	https://github.com/MKPie/biohazard-maps/releases/download/packs/riverside-ca.zip		riverside,riverside
@@ -63,3 +62,4 @@ phoenix-az	Phoenix, Arizona	none	33.4484367	-112.074141	Phoenix, Arizona	2531269
 chicago-il	Chicago, Illinois	none	41.8755616	-87.6244212	Chicago, Illinois	4023090	10481c5bdece3f9219265be75dd5ac41933ab64b8993a00a803abda1699bb856	https://github.com/MKPie/biohazard-maps/releases/download/packs/chicago-il.zip		chicago,cook
 detroit-mi	Detroit, Michigan	none	42.3315509	-83.0466403	Detroit, Michigan	2541265	a29721bc80b909a3d2ee87603c8654b7a04dbc6230370607352461580e94b128	https://github.com/MKPie/biohazard-maps/releases/download/packs/detroit-mi.zip		detroit,wayne
 sacramento-ca	Sacramento, California	none	38.5810606	-121.493895	Sacramento, California	1978610	315711a990134cd2cd53b3e6d8f6d73d13a6af65a3f0e91755cf3a0633aa385e	https://github.com/MKPie/biohazard-maps/releases/download/packs/sacramento-ca.zip		sacramento,sacramento
+los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	4628987	c5ab4d259077c6ebf9d67eb39d1d2d3ef5451426876f4542aa1e0f100b20c0e6	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
