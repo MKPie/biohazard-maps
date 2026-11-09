@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5293163	a1f4a4e258bf56c6c35a5312fa0f7ee03d0a51358e126ab8f4843e70fdcf14fd	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	3997759	32f3a459287c0ad4196c5af4238c3ba7b20c94ef0642f3d0cb43ae00863a9116	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
 houston-tx	Houston, Texas	none	29.7589382	-95.3676974	Houston, Texas	3449204	4b35eb7137b4a5289c7cb31c22f98b8b516b423edd9735270fc72a2fc998ff21	https://github.com/MKPie/biohazard-maps/releases/download/packs/houston-tx.zip		houston,harris
 washington-dc	Washington, District of Columbia	none	38.8950982	-77.0363849	Washington, District of Columbia	3590394	0a999cbe265dd90157a2481fe2bd47f8c7220f464bf8e69fc645b7cb31670026	https://github.com/MKPie/biohazard-maps/releases/download/packs/washington-dc.zip		washington
@@ -63,3 +62,4 @@ dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4043122	cb654f
 philadelphia-pa	Philadelphia, Pennsylvania	none	39.9527237	-75.1635262	Philadelphia, Pennsylvania	4186526	651576ccc1588e08949f5ee50e418a6e9f64612f8d139c1dbbce0f678c02d2e7	https://github.com/MKPie/biohazard-maps/releases/download/packs/philadelphia-pa.zip		philadelphia,philadelphia
 miami-fl	Miami, Florida	none	25.7741566	-80.1935973	Miami, Florida	1190175	3cd5559c54d4037d2f3b63c73acea173c56397407d220bc3bd133f65e470342f	https://github.com/MKPie/biohazard-maps/releases/download/packs/miami-fl.zip		miami,miami-dade
 chicago-il	Chicago, Illinois	none	41.8755616	-87.6244212	Chicago, Illinois	3632009	45090116263a11199f835323c6775878002e26450766ad6db33083835416173f	https://github.com/MKPie/biohazard-maps/releases/download/packs/chicago-il.zip		chicago,cook
+new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5311450	fdce7935fd0e44f5589d869ebcb2ea744af2d48f670a53abe2cfa78fe3690d38	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
