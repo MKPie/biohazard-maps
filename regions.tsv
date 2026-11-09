@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	3625232	141861d6ef12745d55103aaab11e2d6f350552af7d6a5be4c0e9352636fbfafb	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
 boise-id	Boise, Idaho	none	43.6166163	-116.200886	Boise, Idaho	645179	c06e24d392f687ec291b1a958ddd47dd0f18e3b31e2d064a3751d41da9299e37	https://github.com/MKPie/biohazard-maps/releases/download/packs/boise-id.zip		boise,ada
 hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecticut	2283800	37b02c168852016e6d269856009bc5a09935e72324efa036be19030349024591	https://github.com/MKPie/biohazard-maps/releases/download/packs/hartford-ct.zip		hartford,capitol planning region
 el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	514351	fe3291d7cb7d0e9621069f6e4edd06fb79e6119bd1a8b0e175da2ba87d518bed	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
@@ -63,3 +62,4 @@ buffalo-ny	Buffalo, New York	none	42.8864163	-78.8781493	Buffalo, New York	49065
 jacksonville-fl	Jacksonville, Florida	none	30.3262247	-81.6579179	Jacksonville, Florida	970324	0f9337d67755476ac1d7223aee5981552a19af615fae5c742da5d1bce8c1bb84	https://github.com/MKPie/biohazard-maps/releases/download/packs/jacksonville-fl.zip		jacksonville,duval
 new-orleans-la	New Orleans, Louisiana	none	29.9574657	-90.0629493	New Orleans, Louisiana	820122	d614bfa361c66fa0b9413295de237ed07512859919a95a211f4b6d4467686979	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-orleans-la.zip		new orleans,orleans parish
 virginia-beach-va	Virginia Beach, Virginia	none	36.8496579	-75.9760751	Virginia Beach, Virginia	838290	191883b04364edcccb97d9db46b11d6c6ee8118b22db8579a8656f5204c614bc	https://github.com/MKPie/biohazard-maps/releases/download/packs/virginia-beach-va.zip		virginia beach
+providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	3644160	9dbaf8a8879ca40a0710637c5d207bcacf1c1ce9207eea0a45d9b7fdcff7438f	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
