@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 des-plaines-il	Des Plaines, Illinois	none	42.0415823	-87.8873916	Des Plaines, Illinois	3753433	b65c9308e9c172834960b6e3afbf4a5b788b1ceb8e196b01d5f08ed8c7962e24	https://github.com/MKPie/biohazard-maps/releases/download/packs/des-plaines-il.zip	600	des plaines,cook
-gary-in	Gary, Indiana	none	41.6020962	-87.3370646	Gary, Indiana	2785130	585fe3694f785a8446008cad363ae01c9fcd6a809c742971eb938b8a074d9d90	https://github.com/MKPie/biohazard-maps/releases/download/packs/gary-in.zip		gary,lake
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4043122	cb654f87de2bbea446c024de5f23ea6544b8e422fae120322c988fb2546913de	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
 philadelphia-pa	Philadelphia, Pennsylvania	none	39.9527237	-75.1635262	Philadelphia, Pennsylvania	4186526	651576ccc1588e08949f5ee50e418a6e9f64612f8d139c1dbbce0f678c02d2e7	https://github.com/MKPie/biohazard-maps/releases/download/packs/philadelphia-pa.zip		philadelphia,philadelphia
 chicago-il	Chicago, Illinois	none	41.8755616	-87.6244212	Chicago, Illinois	3632009	45090116263a11199f835323c6775878002e26450766ad6db33083835416173f	https://github.com/MKPie/biohazard-maps/releases/download/packs/chicago-il.zip		chicago,cook
@@ -63,3 +62,4 @@ el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	514351	fe3
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	4005102	4201306c677ddea1f9a71c6859f279d4f339efc47fd7de946dd242504b02ab5e	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
 niles-il	Niles, Illinois	none	42.0289319	-87.8122348	Niles, Illinois	3751860	90065382d2e83ad00bade37ba28f3a80b3a52b1eb41dabc87e354c6b41198a25	https://github.com/MKPie/biohazard-maps/releases/download/packs/niles-il.zip	607	niles,cook
 miami-fl	Miami, Florida	none	25.7741566	-80.1935973	Miami, Florida	1198786	ebbaa3aa068e398af2b1c21b6b8659693e6b16102b455dfae5c1497069306c6a	https://github.com/MKPie/biohazard-maps/releases/download/packs/miami-fl.zip		miami,miami-dade
+gary-in	Gary, Indiana	none	41.6020962	-87.3370646	Gary, Indiana	2799621	32a7b252a98eeb20debf8f551129b6709550679814b16fcd92e8328961138f9c	https://github.com/MKPie/biohazard-maps/releases/download/packs/gary-in.zip		gary,lake
