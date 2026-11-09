@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-niles-il	Niles, Illinois	none	42.0289319	-87.8122348	Niles, Illinois	4581929	ae644219c2daa7b258d8f54e662653923d20008d5ee800ea0d1aea038599c35e	https://github.com/MKPie/biohazard-maps/releases/download/packs/niles-il.zip	607	niles,cook
 miami-fl	Miami, Florida	none	25.7741566	-80.1935973	Miami, Florida	1456852	ade7183d373338d84784bb5d38a5e8ffbaeffbc6763eb9bb3934e6615808a12e	https://github.com/MKPie/biohazard-maps/releases/download/packs/miami-fl.zip		miami,miami-dade
 boise-id	Boise, Idaho	none	43.6166163	-116.200886	Boise, Idaho	731834	509779f3ddf36c9ab01a16ccbe962e0bd3181535b6b4550391f8989e4ecfd098	https://github.com/MKPie/biohazard-maps/releases/download/packs/boise-id.zip		boise,ada
 tampa-fl	Tampa, Florida	none	27.9449854	-82.4583107	Tampa, Florida	2558466	81f81541dfc36ee324d34d5c1ac1dc74f181504340112bccf4383a2267c2a3da	https://github.com/MKPie/biohazard-maps/releases/download/packs/tampa-fl.zip		tampa,hillsborough
@@ -63,3 +62,4 @@ cincinnati-oh	Cincinnati, Ohio	none	39.1012809	-84.5127405	Cincinnati, Ohio	1886
 raleigh-nc	Raleigh, North Carolina	none	35.7803977	-78.6390989	Raleigh, North Carolina	3050990	d113aeb79bcc10fd2673682d1ead0802f9d89fcbb6af7bf70b657dcc53e9f589	https://github.com/MKPie/biohazard-maps/releases/download/packs/raleigh-nc.zip		raleigh,wake
 virginia-beach-va	Virginia Beach, Virginia	none	36.8496579	-75.9760751	Virginia Beach, Virginia	1044795	5d49d27707f059bd22e9ca6258a65a6cca5010d1d25eaa482d9fe76552eaed55	https://github.com/MKPie/biohazard-maps/releases/download/packs/virginia-beach-va.zip		virginia beach
 baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	4392539	cc2f76398d141fa14bdf876b31a822977864d047baa72338662c0d16195f45d3	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
+niles-il	Niles, Illinois	none	42.0289319	-87.8122348	Niles, Illinois	4581929	ae644219c2daa7b258d8f54e662653923d20008d5ee800ea0d1aea038599c35e	https://github.com/MKPie/biohazard-maps/releases/download/packs/niles-il.zip	607	niles,cook
