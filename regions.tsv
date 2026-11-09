@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-austin-tx	Austin, Texas	none	30.2649261	-97.7474086	Austin, Texas	1543132	aa45ffe2feab0224032f293b0f2b8433aa1147b4ab8f9d227bbb3b2e2b858da3	https://github.com/MKPie/biohazard-maps/releases/download/packs/austin-tx.zip		austin,travis
 cincinnati-oh	Cincinnati, Ohio	none	39.1012809	-84.5127405	Cincinnati, Ohio	1573039	a99df68d91eff628f5c0e8e1b727a282c0d547979d8e7eaf854761aa78520c91	https://github.com/MKPie/biohazard-maps/releases/download/packs/cincinnati-oh.zip		cincinnati,hamilton
 niles-il	Niles, Illinois	none	42.0289319	-87.8122348	Niles, Illinois	4135924	3439561d5ca7cf7c11009152ad6ec96d3e180c378f1154c57d75d0da9c31b899	https://github.com/MKPie/biohazard-maps/releases/download/packs/niles-il.zip	607	niles,cook
 boise-id	Boise, Idaho	none	43.6166163	-116.200886	Boise, Idaho	684712	1f19d1f1218658f2ec68cd2b4d767e0021fd51e48128fbbd1246b0f423a72041	https://github.com/MKPie/biohazard-maps/releases/download/packs/boise-id.zip		boise,ada
@@ -63,3 +62,4 @@ jacksonville-fl	Jacksonville, Florida	none	30.3262247	-81.6579179	Jacksonville, 
 new-orleans-la	New Orleans, Louisiana	none	29.9574657	-90.0629493	New Orleans, Louisiana	908363	4ab7a5c5810449f0c8ead59bd57372e38dd89886e8aef3f0e617b42f2521867c	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-orleans-la.zip		new orleans,orleans parish
 baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	4020830	fd38f8aff1579822578d6bd34051365791619bf7d47f448c1b56eb9634d7241c	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
 portland-or	Portland, Oregon	none	45.5202471	-122.674194	Portland, Oregon	1813925	3797b074ae0da854da92782bda9a013dfb1dc535b389cd3373f031fc7537bc31	https://github.com/MKPie/biohazard-maps/releases/download/packs/portland-or.zip		portland,multnomah
+austin-tx	Austin, Texas	none	30.2649261	-97.7474086	Austin, Texas	1688618	3ba5c7daddded6481d3c32ad2af3e153df436684de3a5579fb9e6115f848cc8b	https://github.com/MKPie/biohazard-maps/releases/download/packs/austin-tx.zip		austin,travis
