@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4050765	667c47d8bdfd2173318f274a5c83ee961b46931766f13a824ab85e2c56da759c	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
 saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2018520	24a534ea46300835f969b66b65dd35585f286ae9e4f7f3b8d641c61719bf095d	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
 columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1426290	78f2031a234122fc5e961ce8d677df99ab082f2cf33a2f911bdba3193d919b0f	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
 austin-tx	Austin, Texas	none	30.2649261	-97.7474086	Austin, Texas	1543132	aa45ffe2feab0224032f293b0f2b8433aa1147b4ab8f9d227bbb3b2e2b858da3	https://github.com/MKPie/biohazard-maps/releases/download/packs/austin-tx.zip		austin,travis
@@ -63,3 +62,4 @@ memphis-tn	Memphis, Tennessee	none	35.146026	-90.0517786	Memphis, Tennessee	1000
 pittsburgh-pa	Pittsburgh, Pennsylvania	none	40.4406968	-80.0025666	Pittsburgh, Pennsylvania	2915796	2f7b1d6a8596da385dbc2800fca91669b218ec741648e6efb636f60b172f065b	https://github.com/MKPie/biohazard-maps/releases/download/packs/pittsburgh-pa.zip		pittsburgh,allegheny
 new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	6525228	d688d01d3ab08ac1f962f2d809b505231cb29c51db4ccaf34b0bd87a0369000a	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 tucson-az	Tucson, Arizona	none	32.2228765	-110.974847	Tucson, Arizona	673600	dcadb458ec41c7894ad9c102c302be5869d5fc0ee47a86a70621b2304575e855	https://github.com/MKPie/biohazard-maps/releases/download/packs/tucson-az.zip		tucson,pima
+dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4344856	5b3f8765d12bbe423f1a3dffbbbe438dd465cdf8d686479b878276245d05db00	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
