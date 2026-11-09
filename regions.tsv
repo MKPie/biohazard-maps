@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4043122	cb654f87de2bbea446c024de5f23ea6544b8e422fae120322c988fb2546913de	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
-new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5311450	fdce7935fd0e44f5589d869ebcb2ea744af2d48f670a53abe2cfa78fe3690d38	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2012678	ae2a4a5974c9e7b970c5322ad368c3b8ea48e5c3abc88e720abcc1e8741e5a41	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
 denver-co	Denver, Colorado	none	39.7392364	-104.984862	Denver, Colorado	1633031	6968a98094ad5f742c8f36d1823e16c38cd601fcc4e32af6230819dca2d45341	https://github.com/MKPie/biohazard-maps/releases/download/packs/denver-co.zip		denver
 san-antonio-tx	San Antonio, Texas	none	29.4246002	-98.4951405	San Antonio, Texas	1371232	450a8a30c077b43fbb26bc63e86f6b283e97dc17e28c48e2041a882fbe9de8a9	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-antonio-tx.zip		san antonio,bexar
@@ -63,3 +62,4 @@ minneapolis-mn	Minneapolis, Minnesota	none	44.9772995	-93.2654692	Minneapolis, M
 washington-dc	Washington, District of Columbia	none	38.8950982	-77.0363849	Washington, District of Columbia	3659899	55e3dfb48afe8410319351e85868ce598f086ec1f3d7371e888f2d13e2250c4f	https://github.com/MKPie/biohazard-maps/releases/download/packs/washington-dc.zip		washington
 sacramento-ca	Sacramento, California	none	38.5810606	-121.493895	Sacramento, California	1776310	99d1efcd117b149ed66f6c87be5b0b8b0a4a966ff3caef7889fd04e0a23da1c1	https://github.com/MKPie/biohazard-maps/releases/download/packs/sacramento-ca.zip		sacramento,sacramento
 houston-tx	Houston, Texas	none	29.7589382	-95.3676974	Houston, Texas	3463580	f7abca7ce862de7c13ea1fe96cba741a6b7a8fe31055f01e5aeff5b59c06f20c	https://github.com/MKPie/biohazard-maps/releases/download/packs/houston-tx.zip		houston,harris
+new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5354092	f33867be5099279f56c35c4ccabf89689eb68845ffacfdd27e49ea7927db8259	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
