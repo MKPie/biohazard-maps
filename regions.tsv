@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	4003208	9b192d9b255e7c1ab2a04a24df98f0b63d07e5c9b0cf07b787ab3fa8c0b05ca0	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
 el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	540664	fe0593115b91034fc689a4fc3a4a69d50d07f1079ee8bacc4d1a2ffb70d28834	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
 san-francisco-ca	San Francisco, California	none	37.7879363	-122.4075201	San Francisco, California	3134392	acdd81babf9fda9f4d98feff1938857a72ff9ad4f1beb4aaa6e2ca40d8ec4bcf	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-francisco-ca.zip		san francisco
 detroit-mi	Detroit, Michigan	none	42.3315509	-83.0466403	Detroit, Michigan	2541265	a29721bc80b909a3d2ee87603c8654b7a04dbc6230370607352461580e94b128	https://github.com/MKPie/biohazard-maps/releases/download/packs/detroit-mi.zip		detroit,wayne
@@ -63,3 +62,4 @@ indianapolis-in	Indianapolis, Indiana	none	39.7683331	-86.1583502	Indianapolis, 
 san-antonio-tx	San Antonio, Texas	none	29.4246002	-98.4951405	San Antonio, Texas	1580073	d7bcb64939cab5ab0bd68064102002c39b78727ee581650849bad7dc719e676b	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-antonio-tx.zip		san antonio,bexar
 chicago-il	Chicago, Illinois	none	41.8755616	-87.6244212	Chicago, Illinois	4455688	1ef14087446b18d06b98caee6920bb3828bef54f249e6a00db077a9ccf770933	https://github.com/MKPie/biohazard-maps/releases/download/packs/chicago-il.zip		chicago,cook
 phoenix-az	Phoenix, Arizona	none	33.4484367	-112.074141	Phoenix, Arizona	2756904	f21cd8568599617f9a0ffbe1e4f35711e244025d3dc18377aea0c6bbfa8d8636	https://github.com/MKPie/biohazard-maps/releases/download/packs/phoenix-az.zip		phoenix,maricopa
+providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	4344440	bcf3a91c1ab9848bd39f3b1049a8f37d3643b496f13ff5758cbe02bdbe1b593e	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
