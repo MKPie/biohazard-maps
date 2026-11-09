@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	3997759	32f3a459287c0ad4196c5af4238c3ba7b20c94ef0642f3d0cb43ae00863a9116	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
-kansas-city-mo	Kansas City, Missouri	none	39.100105	-94.5781416	Kansas City, Missouri	1290360	529561871f21ce33041c4e60fb8158fc81c6086fa4ef660228e01288d8f28427	https://github.com/MKPie/biohazard-maps/releases/download/packs/kansas-city-mo.zip		kansas city,jackson
 indianapolis-in	Indianapolis, Indiana	none	39.7683331	-86.1583502	Indianapolis, Indiana	1524702	d9c6826fc0fe0d35238bf763defd78523c3bc014010c1a04630555cbdff6b799	https://github.com/MKPie/biohazard-maps/releases/download/packs/indianapolis-in.zip		indianapolis,marion
 san-jose-ca	San Jose, California	none	37.3361663	-121.890591	San Jose, California	2391070	5603268e7ba4611799b8268d28d1f2c4bbb7506acf132965a6c4ed15a8d94edf	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-jose-ca.zip		san jose,santa clara
 nashville-tn	Nashville, Tennessee	none	36.1622767	-86.7742984	Nashville, Tennessee	1420350	b2a9e30df80d1d5a0962c7af73b18e8fd3e8068f43c15b689565ff27561a8897	https://github.com/MKPie/biohazard-maps/releases/download/packs/nashville-tn.zip		nashville,davidson
@@ -63,3 +62,4 @@ las-vegas-nv	Las Vegas, Nevada	none	36.1674263	-115.1484131	Las Vegas, Nevada	11
 cincinnati-oh	Cincinnati, Ohio	none	39.1012809	-84.5127405	Cincinnati, Ohio	1569207	e42189189f79d67d2f75225afe894d9ab9584e53d584ad204beb560195159f74	https://github.com/MKPie/biohazard-maps/releases/download/packs/cincinnati-oh.zip		cincinnati,hamilton
 columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1422398	d7ed9e97a6ec787fba2115e903f614d1ebaa9cce5103263de15367adc8419687	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
 cleveland-oh	Cleveland, Ohio	none	41.4996574	-81.6936772	Cleveland, Ohio	1638387	f7d090c2f64a6b75a6fee094ed8b568a68587a22f94c65c85bef4ff2f16ef920	https://github.com/MKPie/biohazard-maps/releases/download/packs/cleveland-oh.zip		cleveland,cuyahoga
+kansas-city-mo	Kansas City, Missouri	none	39.100105	-94.5781416	Kansas City, Missouri	1292791	21dcac3b133fbfb8719a7a0ad01a349045c701ae6702929b2b2e8545094f998b	https://github.com/MKPie/biohazard-maps/releases/download/packs/kansas-city-mo.zip		kansas city,jackson
