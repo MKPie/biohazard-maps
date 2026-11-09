@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 raleigh-nc	Raleigh, North Carolina	none	35.7803977	-78.6390989	Raleigh, North Carolina	2932401	42dab1132329b63012fa44e9a5bc5d2e1eb1da925146764a8872eb169261d0de	https://github.com/MKPie/biohazard-maps/releases/download/packs/raleigh-nc.zip		raleigh,wake
-richmond-va	Richmond, Virginia	none	37.5385087	-77.43428	Richmond, Virginia	1065245	55baa378753dd9ccb69c13d1daa3aab14e4e24752cf7c9426ccf53c682117ed9	https://github.com/MKPie/biohazard-maps/releases/download/packs/richmond-va.zip		richmond
 charlotte-nc	Charlotte, North Carolina	none	35.2272086	-80.8430827	Charlotte, North Carolina	2599749	9f9eaacbfdc0e559c997a3fe82e678f0b11873b0d721ed8352a3d481f5f6ec98	https://github.com/MKPie/biohazard-maps/releases/download/packs/charlotte-nc.zip		charlotte,mecklenburg
 virginia-beach-va	Virginia Beach, Virginia	none	36.8496579	-75.9760751	Virginia Beach, Virginia	933462	2f6385361644b80c7bbe023562bfc394bb7e0f7bf9b5b20876ed104ab86cfcb9	https://github.com/MKPie/biohazard-maps/releases/download/packs/virginia-beach-va.zip		virginia beach
 buffalo-ny	Buffalo, New York	none	42.8864163	-78.8781493	Buffalo, New York	564191	69220d13de3243913dcd0e64881f87426caefa81ed2355527bca3ee9835dc626	https://github.com/MKPie/biohazard-maps/releases/download/packs/buffalo-ny.zip		buffalo,erie
@@ -63,3 +62,4 @@ louisville-ky	Louisville, Kentucky	none	38.2542376	-85.759407	Louisville, Kentuc
 new-orleans-la	New Orleans, Louisiana	none	29.9574657	-90.0629493	New Orleans, Louisiana	959916	c311358c221b761215e5b45a869c70c70329e0d185b6c4a8e93069ca8fd674fa	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-orleans-la.zip		new orleans,orleans parish
 city-of-rochester-ny	City of Rochester, New York	none	43.157285	-77.615214	City of Rochester, New York	652993	468a77a684d644f88446e4aa8f4a65b52f58c1a7afd079ff4120c6a6e258bcad	https://github.com/MKPie/biohazard-maps/releases/download/packs/city-of-rochester-ny.zip		city of rochester,monroe
 austin-tx	Austin, Texas	none	30.2649261	-97.7474086	Austin, Texas	1852849	6fa4a32cb9d2e42e84ccd86c0640b22643cd0731d48c56af7b6a7cee2549f98d	https://github.com/MKPie/biohazard-maps/releases/download/packs/austin-tx.zip		austin,travis
+richmond-va	Richmond, Virginia	none	37.5385087	-77.43428	Richmond, Virginia	1183779	5d99e1c6cbe3416a16c95da585a75f06cc03573519b91d05a5c21fa3de614686	https://github.com/MKPie/biohazard-maps/releases/download/packs/richmond-va.zip		richmond
