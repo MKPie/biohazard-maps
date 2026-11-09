@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5354092	f33867be5099279f56c35c4ccabf89689eb68845ffacfdd27e49ea7927db8259	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4050765	667c47d8bdfd2173318f274a5c83ee961b46931766f13a824ab85e2c56da759c	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
 saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2018520	24a534ea46300835f969b66b65dd35585f286ae9e4f7f3b8d641c61719bf095d	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
 columbus-oh	Columbus, Ohio	none	39.9622601	-83.0007065	Columbus, Ohio	1426290	78f2031a234122fc5e961ce8d677df99ab082f2cf33a2f911bdba3193d919b0f	https://github.com/MKPie/biohazard-maps/releases/download/packs/columbus-oh.zip		columbus,franklin
@@ -63,3 +62,4 @@ houston-tx	Houston, Texas	none	29.7589382	-95.3676974	Houston, Texas	3709893	aa0
 oklahoma-city-ok	Oklahoma City, Oklahoma	none	35.4729886	-97.5170536	Oklahoma City, Oklahoma	990579	9795b0dad6b1cf482613bd454c9b426f9ca6f4e4ba13303893033fc59be9f97b	https://github.com/MKPie/biohazard-maps/releases/download/packs/oklahoma-city-ok.zip		oklahoma city,oklahoma
 memphis-tn	Memphis, Tennessee	none	35.146026	-90.0517786	Memphis, Tennessee	1000128	2a8294eb883078e3c273c73288914424a3053576565ad2316a8b6d0dc1b4c10c	https://github.com/MKPie/biohazard-maps/releases/download/packs/memphis-tn.zip		memphis,shelby
 pittsburgh-pa	Pittsburgh, Pennsylvania	none	40.4406968	-80.0025666	Pittsburgh, Pennsylvania	2915796	2f7b1d6a8596da385dbc2800fca91669b218ec741648e6efb636f60b172f065b	https://github.com/MKPie/biohazard-maps/releases/download/packs/pittsburgh-pa.zip		pittsburgh,allegheny
+new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	6525228	d688d01d3ab08ac1f962f2d809b505231cb29c51db4ccaf34b0bd87a0369000a	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
