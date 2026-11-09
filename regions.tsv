@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2012678	ae2a4a5974c9e7b970c5322ad368c3b8ea48e5c3abc88e720abcc1e8741e5a41	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
 denver-co	Denver, Colorado	none	39.7392364	-104.984862	Denver, Colorado	1633031	6968a98094ad5f742c8f36d1823e16c38cd601fcc4e32af6230819dca2d45341	https://github.com/MKPie/biohazard-maps/releases/download/packs/denver-co.zip		denver
 baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	3540169	69e8200d591c9ac286e94e28628f36feacdf0a6967d9b17082f99913f05c26d8	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
 austin-tx	Austin, Texas	none	30.2649261	-97.7474086	Austin, Texas	1538946	0104db63d843063ff77a4e72e3ae636b92e84fb3ccbf13cb47a57f845dcc9bce	https://github.com/MKPie/biohazard-maps/releases/download/packs/austin-tx.zip		austin,travis
@@ -63,3 +62,4 @@ las-vegas-nv	Las Vegas, Nevada	none	36.1674263	-115.1484131	Las Vegas, Nevada	11
 oklahoma-city-ok	Oklahoma City, Oklahoma	none	35.4729886	-97.5170536	Oklahoma City, Oklahoma	929143	c51b02a5d47305c4cab0611070ebfcc69f0169fcce17e9448b85dde5dfbf3807	https://github.com/MKPie/biohazard-maps/releases/download/packs/oklahoma-city-ok.zip		oklahoma city,oklahoma
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4050765	667c47d8bdfd2173318f274a5c83ee961b46931766f13a824ab85e2c56da759c	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
 indianapolis-in	Indianapolis, Indiana	none	39.7683331	-86.1583502	Indianapolis, Indiana	1532216	27563128fbd899806b55b291ee9b8ecff0e32917ecb16ee204cd2ca74e596396	https://github.com/MKPie/biohazard-maps/releases/download/packs/indianapolis-in.zip		indianapolis,marion
+saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2018520	24a534ea46300835f969b66b65dd35585f286ae9e4f7f3b8d641c61719bf095d	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
