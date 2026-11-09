@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	3997759	32f3a459287c0ad4196c5af4238c3ba7b20c94ef0642f3d0cb43ae00863a9116	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
-atlanta-ga	Atlanta, Georgia	none	33.7544657	-84.3898151	Atlanta, Georgia	3073466	3f58d3c4b976e6fcc004e62433adb450cfb9b0098cd9d64524d2380b76ca9989	https://github.com/MKPie/biohazard-maps/releases/download/packs/atlanta-ga.zip		atlanta,fulton
 riverside-ca	Riverside, California	none	33.9732079	-117.3730926	Riverside, California	3738851	b38b32511c6dd374562b6125759574cc43d35ed2be8ff448c7739cf8d403bb19	https://github.com/MKPie/biohazard-maps/releases/download/packs/riverside-ca.zip		riverside,riverside
 detroit-mi	Detroit, Michigan	none	42.3315509	-83.0466403	Detroit, Michigan	2273189	b1aa7e43c3d554cec393c7f9afe9f89519eb5088d722aa89fc47a9b7f5876e6e	https://github.com/MKPie/biohazard-maps/releases/download/packs/detroit-mi.zip		detroit,wayne
 seattle-wa	Seattle, Washington	none	47.6038321	-122.330062	Seattle, Washington	2260930	556203803dd929322c31a7ae716bbc673994949cd9cce813b54fbd37715637a4	https://github.com/MKPie/biohazard-maps/releases/download/packs/seattle-wa.zip		seattle,king
@@ -63,3 +62,4 @@ san-francisco-ca	San Francisco, California	none	37.7879363	-122.4075201	San Fran
 boston-ma	Boston, Massachusetts	none	42.3588336	-71.0578303	Boston, Massachusetts	3479437	484e63f49ef869e42b2585d366f71d59b9dd13292dd74f8920c6b9f89d0e9962	https://github.com/MKPie/biohazard-maps/releases/download/packs/boston-ma.zip		boston,suffolk
 washington-dc	Washington, District of Columbia	none	38.8950982	-77.0363849	Washington, District of Columbia	3642044	90667442da52e202aa372d45fab258d49d5db5c9bbf7b17f682e2b0fbdfede43	https://github.com/MKPie/biohazard-maps/releases/download/packs/washington-dc.zip		washington
 houston-tx	Houston, Texas	none	29.7589382	-95.3676974	Houston, Texas	3457023	dfdc60ef161f8c4ed49c5ff44b216305e7f5b4e51e05bc842ae63a6c17e51631	https://github.com/MKPie/biohazard-maps/releases/download/packs/houston-tx.zip		houston,harris
+atlanta-ga	Atlanta, Georgia	none	33.7544657	-84.3898151	Atlanta, Georgia	3098523	ed3b2aba235e274842e9324f311555e4db8cd455592f91675c81a0ddfb0ce8b2	https://github.com/MKPie/biohazard-maps/releases/download/packs/atlanta-ga.zip		atlanta,fulton
