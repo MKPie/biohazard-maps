@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2018520	24a534ea46300835f969b66b65dd35585f286ae9e4f7f3b8d641c61719bf095d	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
 austin-tx	Austin, Texas	none	30.2649261	-97.7474086	Austin, Texas	1543132	aa45ffe2feab0224032f293b0f2b8433aa1147b4ab8f9d227bbb3b2e2b858da3	https://github.com/MKPie/biohazard-maps/releases/download/packs/austin-tx.zip		austin,travis
 charlotte-nc	Charlotte, North Carolina	none	35.2272086	-80.8430827	Charlotte, North Carolina	2449180	a9db3a121a2943668f133835cd451747c5f47bd932bcebeb59c5aab842f50a51	https://github.com/MKPie/biohazard-maps/releases/download/packs/charlotte-nc.zip		charlotte,mecklenburg
 louisville-ky	Louisville, Kentucky	none	38.2542376	-85.759407	Louisville, Kentucky	1026155	47b20fc09c99c708847ffbb2329c92e9181a1d256e6a393c40c8902cf032ac30	https://github.com/MKPie/biohazard-maps/releases/download/packs/louisville-ky.zip		louisville,jefferson
@@ -63,3 +62,4 @@ kansas-city-mo	Kansas City, Missouri	none	39.100105	-94.5781416	Kansas City, Mis
 birmingham-al	Birmingham, Alabama	none	33.5206824	-86.8024326	Birmingham, Alabama	1849509	1fbd9374463d78ad1d64ab9a4c37a9974a61cbf480b9fe0667181c3fa4333b15	https://github.com/MKPie/biohazard-maps/releases/download/packs/birmingham-al.zip		birmingham,jefferson
 denver-co	Denver, Colorado	none	39.7392364	-104.984862	Denver, Colorado	1916198	7a633b88549ed51fd3fbc385a2f89cdccf515b58771f470f457a570b7233d824	https://github.com/MKPie/biohazard-maps/releases/download/packs/denver-co.zip		denver
 cleveland-oh	Cleveland, Ohio	none	41.4996574	-81.6936772	Cleveland, Ohio	1850336	813a46ad03e10791c556ef7722baf9a926c1e18df1da1050948dbaef5fe0e9dc	https://github.com/MKPie/biohazard-maps/releases/download/packs/cleveland-oh.zip		cleveland,cuyahoga
+saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2140227	7955f56f30d632fd2fd3a4f95fb98e724705f02674fb5a6aafcca15670a0bd46	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
