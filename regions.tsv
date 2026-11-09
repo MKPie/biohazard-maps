@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-louisville-ky	Louisville, Kentucky	none	38.2542376	-85.759407	Louisville, Kentucky	1100835	e86c2cfab4266807e9dc66d196cbee5cc31ece6b6436f81ccbd81c4b6c6e92bc	https://github.com/MKPie/biohazard-maps/releases/download/packs/louisville-ky.zip		louisville,jefferson
 raleigh-nc	Raleigh, North Carolina	none	35.7803977	-78.6390989	Raleigh, North Carolina	2932401	42dab1132329b63012fa44e9a5bc5d2e1eb1da925146764a8872eb169261d0de	https://github.com/MKPie/biohazard-maps/releases/download/packs/raleigh-nc.zip		raleigh,wake
 richmond-va	Richmond, Virginia	none	37.5385087	-77.43428	Richmond, Virginia	1065245	55baa378753dd9ccb69c13d1daa3aab14e4e24752cf7c9426ccf53c682117ed9	https://github.com/MKPie/biohazard-maps/releases/download/packs/richmond-va.zip		richmond
 city-of-rochester-ny	City of Rochester, New York	none	43.157285	-77.615214	City of Rochester, New York	592603	5c63e58fd1d40bc51dab66ebf1a77f9cb108b15e7244212fe3861f61e9bdb5d9	https://github.com/MKPie/biohazard-maps/releases/download/packs/city-of-rochester-ny.zip		city of rochester,monroe
@@ -63,3 +62,4 @@ hartford-ct	Hartford, Connecticut	none	41.7661621	-72.6732726	Hartford, Connecti
 new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	7015975	0aa9d923efa11431cea3c82e21b771b31e90a2655da608b5f158c0d6a22a8291	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 cleveland-oh	Cleveland, Ohio	none	41.4996574	-81.6936772	Cleveland, Ohio	2004885	1a638243c4fd94e6406c06f10eed37d96fed5ffe868b1b29dbe668915a5a4e79	https://github.com/MKPie/biohazard-maps/releases/download/packs/cleveland-oh.zip		cleveland,cuyahoga
 omaha-ne	Omaha, Nebraska	none	41.2587459	-95.9383758	Omaha, Nebraska	997508	2217dae90953937b3c9fd6db3789f51ecca7c69ec7df705748934e9013b06cf5	https://github.com/MKPie/biohazard-maps/releases/download/packs/omaha-ne.zip		omaha,douglas
+louisville-ky	Louisville, Kentucky	none	38.2542376	-85.759407	Louisville, Kentucky	1189864	65b9dcc49569ac335aefaa4fa3fe01dfda4b43f3c39f95709033a7b198b292fc	https://github.com/MKPie/biohazard-maps/releases/download/packs/louisville-ky.zip		louisville,jefferson
