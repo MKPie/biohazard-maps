@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 san-francisco-ca	San Francisco, California	none	37.7879363	-122.4075201	San Francisco, California	3134392	acdd81babf9fda9f4d98feff1938857a72ff9ad4f1beb4aaa6e2ca40d8ec4bcf	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-francisco-ca.zip		san francisco
-detroit-mi	Detroit, Michigan	none	42.3315509	-83.0466403	Detroit, Michigan	2541265	a29721bc80b909a3d2ee87603c8654b7a04dbc6230370607352461580e94b128	https://github.com/MKPie/biohazard-maps/releases/download/packs/detroit-mi.zip		detroit,wayne
 sacramento-ca	Sacramento, California	none	38.5810606	-121.493895	Sacramento, California	1978610	315711a990134cd2cd53b3e6d8f6d73d13a6af65a3f0e91755cf3a0633aa385e	https://github.com/MKPie/biohazard-maps/releases/download/packs/sacramento-ca.zip		sacramento,sacramento
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	4628987	c5ab4d259077c6ebf9d67eb39d1d2d3ef5451426876f4542aa1e0f100b20c0e6	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
 riverside-ca	Riverside, California	none	33.9732079	-117.3730926	Riverside, California	4178221	9cc4af5fa547c5b4848393abad8b7d21632d99c583e9a06cdf1e3266e81f865f	https://github.com/MKPie/biohazard-maps/releases/download/packs/riverside-ca.zip		riverside,riverside
@@ -63,3 +62,4 @@ phoenix-az	Phoenix, Arizona	none	33.4484367	-112.074141	Phoenix, Arizona	2756904
 providence-ri	Providence, Rhode Island	none	41.8239891	-71.4128343	Providence, Rhode Island	4344440	bcf3a91c1ab9848bd39f3b1049a8f37d3643b496f13ff5758cbe02bdbe1b593e	https://github.com/MKPie/biohazard-maps/releases/download/packs/providence-ri.zip		providence,providence
 el-paso-tx	El Paso, Texas	none	31.7601001	-106.4870476	El Paso, Texas	577954	f10db234a44717fffc905531dc0653f2ae34f95cba4c2ffa0061b2af0a168795	https://github.com/MKPie/biohazard-maps/releases/download/packs/el-paso-tx.zip		el paso,el paso
 minneapolis-mn	Minneapolis, Minnesota	none	44.9772995	-93.2654692	Minneapolis, Minnesota	2653864	337c07efe47d169f03184b3201843945ab9e02921d4c14636a61667fc668c12f	https://github.com/MKPie/biohazard-maps/releases/download/packs/minneapolis-mn.zip		minneapolis,hennepin
+detroit-mi	Detroit, Michigan	none	42.3315509	-83.0466403	Detroit, Michigan	2820060	a3585f8e8a39210fe4fe434742a33a255346b3fcce259250e8888de2f3318070	https://github.com/MKPie/biohazard-maps/releases/download/packs/detroit-mi.zip		detroit,wayne
