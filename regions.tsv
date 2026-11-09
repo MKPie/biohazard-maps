@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4043122	cb654f87de2bbea446c024de5f23ea6544b8e422fae120322c988fb2546913de	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
-chicago-il	Chicago, Illinois	none	41.8755616	-87.6244212	Chicago, Illinois	3632009	45090116263a11199f835323c6775878002e26450766ad6db33083835416173f	https://github.com/MKPie/biohazard-maps/releases/download/packs/chicago-il.zip		chicago,cook
 new-york-ny	New York, New York	none	40.7127281	-74.0060152	New York, New York	5311450	fdce7935fd0e44f5589d869ebcb2ea744af2d48f670a53abe2cfa78fe3690d38	https://github.com/MKPie/biohazard-maps/releases/download/packs/new-york-ny.zip		new york
 boston-ma	Boston, Massachusetts	none	42.3588336	-71.0578303	Boston, Massachusetts	3479437	484e63f49ef869e42b2585d366f71d59b9dd13292dd74f8920c6b9f89d0e9962	https://github.com/MKPie/biohazard-maps/releases/download/packs/boston-ma.zip		boston,suffolk
 washington-dc	Washington, District of Columbia	none	38.8950982	-77.0363849	Washington, District of Columbia	3642044	90667442da52e202aa372d45fab258d49d5db5c9bbf7b17f682e2b0fbdfede43	https://github.com/MKPie/biohazard-maps/releases/download/packs/washington-dc.zip		washington
@@ -63,3 +62,4 @@ philadelphia-pa	Philadelphia, Pennsylvania	none	39.9527237	-75.1635262	Philadelp
 seattle-wa	Seattle, Washington	none	47.6038321	-122.330062	Seattle, Washington	2278277	754cc426c7a026e7c879403e37b0a1df19d490cbffff136406a0805bc5f3341e	https://github.com/MKPie/biohazard-maps/releases/download/packs/seattle-wa.zip		seattle,king
 detroit-mi	Detroit, Michigan	none	42.3315509	-83.0466403	Detroit, Michigan	2297931	8317e4a576c7f5709e2d281a13f43bfb50b072f3532a0d964b48b95aa9de4302	https://github.com/MKPie/biohazard-maps/releases/download/packs/detroit-mi.zip		detroit,wayne
 orlando-fl	Orlando, Florida	none	28.5421218	-81.379045	Orlando, Florida	2456770	4b268bc99267d928497bd85be9d6d0b23e3233fc888cefe4f9332db7ce05b40f	https://github.com/MKPie/biohazard-maps/releases/download/packs/orlando-fl.zip		orlando,orange
+chicago-il	Chicago, Illinois	none	41.8755616	-87.6244212	Chicago, Illinois	3648139	8e14e36e831459f490c0e723b84b730a59e5eb61c2aeae20ef40673f145bfd93	https://github.com/MKPie/biohazard-maps/releases/download/packs/chicago-il.zip		chicago,cook
