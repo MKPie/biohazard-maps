@@ -23,6 +23,14 @@ SUFFIX = {"avenue": "ave", "av": "ave", "ave": "ave", "street": "st", "str": "st
 DIRS = {"north": "n", "n": "n", "south": "s", "s": "s", "east": "e", "e": "e", "west": "w", "w": "w"}
 IL_ROUTE = re.compile(r"(?:il|illinois)(?: state)?(?: route| rte| hwy| highway)? (\d+)$")
 US_ROUTE = re.compile(r"(?:us|u s)(?: route| rte| hwy| highway)? (\d+)$")
+POINT_PLACES = {"neighbourhood", "suburb", "quarter"}
+
+
+def plain(s):
+    """Name key for matching a city to its outline: lower case, no 'City of', letters and digits only."""
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"^(city|village|town|township) of ", "", s.lower()))
+
+
 DRIVABLE = {"motorway", "trunk", "primary", "secondary", "tertiary", "unclassified", "residential", "service",
             "motorway_link", "trunk_link", "primary_link", "secondary_link", "tertiary_link", "living_street"}
 
@@ -69,7 +77,7 @@ def clip(pbfs, bbox, workdir):
         subprocess.run(["osmium", "merge", "--overwrite", "-o", merged] + parts, check=True)
     kept = os.path.join(workdir, "kept.osm.pbf")
     subprocess.run(["osmium", "tags-filter", "--overwrite", "-o", kept, merged,
-                    "w/highway", "r/boundary=administrative", "w/place", "r/place"], check=True)
+                    "w/highway", "r/boundary=administrative", "w/place", "r/place", "n/place=neighbourhood,suburb,quarter"], check=True)
     return [kept]
 
 
@@ -88,8 +96,10 @@ def make_inside(lat0, lon0, radius_km):
 
 
 class Streets(osmium.SimpleHandler):
-    def __init__(self, bbox, levels, inside=None):
+    def __init__(self, bbox, levels, inside=None, cities=None):
         super().__init__()
+        self.cities = cities or set()   # plain() names of the city the pack is for; its outline is kept at any admin level
+        self.points = {}     # neighborhood name -> list of (lon, lat) for places that are only a point on the map
         self.bbox = bbox
         self.inside = inside or (lambda lat, lon: True)
         self.levels = levels
@@ -121,13 +131,26 @@ class Streets(osmium.SimpleHandler):
             elif f[0] != n:
                 self.multi.setdefault(nd.ref, {f[0]}).add(n)
 
+    def node(self, n):
+        if n.tags.get("place") not in POINT_PLACES:
+            return
+        name = n.tags.get("name")
+        if not name or not n.location.valid():
+            return
+        lat, lon = n.location.lat, n.location.lon
+        x0, y0, x1, y1 = self.bbox
+        if lon < x0 or lon > x1 or lat < y0 or lat > y1 or not self.inside(lat, lon):
+            return
+        self.points.setdefault(name, []).append((lon, lat))
+
     def area(self, a):
         t = a.tags
         name = t.get("name")
         if not name:
             return
         lvl = t.get("admin_level")
-        ok = (t.get("boundary") == "administrative" and lvl in self.levels) or t.get("place") in ("neighbourhood", "suburb", "quarter")
+        is_city = plain(name) in self.cities and (t.get("boundary") == "administrative" or t.get("place") in ("city", "town", "village"))
+        ok = (t.get("boundary") == "administrative" and lvl in self.levels) or t.get("place") in ("neighbourhood", "suburb", "quarter") or is_city
         if not ok:
             return
         x0, y0, x1, y1 = self.bbox
@@ -176,7 +199,8 @@ def main():
         sys.exit("--zips must be 3-digit prefixes like 600,602")
     places = [p.strip().lower() for p in a.places.split(",") if p.strip()]
 
-    h = Streets(bbox, set(a.levels.split(",")), make_inside(a.lat, a.lon, a.radius_km))
+    cities = {plain(a.name.split(",")[0])} | {plain(p) for p in places}
+    h = Streets(bbox, set(a.levels.split(",")), make_inside(a.lat, a.lon, a.radius_km), cities)
     # node locations go to a file on disk so a whole state extract does not need gigabytes of memory
     idx = "sparse_file_array," + os.path.join(os.path.dirname(os.path.abspath(a.out)) if False else a.out, ".nodeidx")
     os.makedirs(a.out, exist_ok=True)
@@ -206,6 +230,10 @@ def main():
     areas = ""
     for nm, rings in sorted(h.areas.items()):
         areas += nm.replace("\t", " ") + "".join("\t" + " ".join("%.6f,%.6f" % p for p in r) for r in rings) + "\n"
+    # A neighborhood that is only a point on the map: one "@lon,lat" column per point. The app names a spot by the nearest such point.
+    for nm, pts in sorted(h.points.items()):
+        if nm not in h.areas:
+            areas += nm.replace("\t", " ") + "".join("\t@%.6f,%.6f" % p for p in pts[:4]) + "\n"
     center = a.center_name or a.name
     meta = "id\t%s\nname\t%s\ngrid\t%s\nlat\t%s\nlon\t%s\ncenter_name\t%s\n" % (a.id, a.name, a.grid, a.lat, a.lon, center)
     zpath = os.path.join(a.out, a.id + ".zip")
@@ -232,7 +260,7 @@ def main():
         old.insert(0, "# id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places")
     with open(ipath, "w", encoding="utf-8") as f:
         f.write("\n".join(old + [line]) + "\n")
-    print("ways used: %d | intersections: %d | areas: %d" % (h.ways, len(rows), len(h.areas)))
+    print("ways used: %d | intersections: %d | areas: %d | point neighborhoods: %d" % (h.ways, len(rows), len(h.areas), len([n for n in h.points if n not in h.areas])))
     print("wrote %s (%.1f MB) and updated %s" % (zpath, len(data) / 1048576.0, ipath))
     print("next: upload %s as a Release file on %s with tag '%s', then commit and push %s to the repo root." % (zpath, a.repo, a.tag, ipath))
 
