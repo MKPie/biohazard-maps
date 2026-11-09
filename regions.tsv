@@ -1,6 +1,5 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
-des-plaines-il	Des Plaines, Illinois	none	42.0415823	-87.8873916	Des Plaines, Illinois	3753433	b65c9308e9c172834960b6e3afbf4a5b788b1ceb8e196b01d5f08ed8c7962e24	https://github.com/MKPie/biohazard-maps/releases/download/packs/des-plaines-il.zip	600	des plaines,cook
 dallas-tx	Dallas, Texas	none	32.7762719	-96.7968559	Dallas, Texas	4043122	cb654f87de2bbea446c024de5f23ea6544b8e422fae120322c988fb2546913de	https://github.com/MKPie/biohazard-maps/releases/download/packs/dallas-tx.zip		dallas,dallas
 philadelphia-pa	Philadelphia, Pennsylvania	none	39.9527237	-75.1635262	Philadelphia, Pennsylvania	4186526	651576ccc1588e08949f5ee50e418a6e9f64612f8d139c1dbbce0f678c02d2e7	https://github.com/MKPie/biohazard-maps/releases/download/packs/philadelphia-pa.zip		philadelphia,philadelphia
 chicago-il	Chicago, Illinois	none	41.8755616	-87.6244212	Chicago, Illinois	3632009	45090116263a11199f835323c6775878002e26450766ad6db33083835416173f	https://github.com/MKPie/biohazard-maps/releases/download/packs/chicago-il.zip		chicago,cook
@@ -63,3 +62,4 @@ phoenix-az	Phoenix, Arizona	none	33.4484367	-112.074141	Phoenix, Arizona	2240066
 tampa-fl	Tampa, Florida	none	27.9449854	-82.4583107	Tampa, Florida	2276913	2ca9bb6819616f717a6cc918f99d2e1958f9e3d99b12fb6986bba0c1835a4479	https://github.com/MKPie/biohazard-maps/releases/download/packs/tampa-fl.zip		tampa,hillsborough
 san-diego-ca	San Diego, California	none	32.7157062	-117.1638284	San Diego, California	1094781	f3e96a22359c97adbf79a7d9585ed9f69dbb119baa8434941e569870e3aa3e1b	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-diego-ca.zip		san diego,san diego
 san-francisco-ca	San Francisco, California	none	37.7879363	-122.4075201	San Francisco, California	2545218	90d5e5cd5e40cd328e9e1cc0023a1d26e45d71c5e1963e7c71c289c619b7a12c	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-francisco-ca.zip		san francisco
+des-plaines-il	Des Plaines, Illinois	none	42.0415823	-87.8873916	Des Plaines, Illinois	3769567	fc68b9f04683c1a37b916b6d0521cfb4f8cbff60c0682463f72799a9445238b8	https://github.com/MKPie/biohazard-maps/releases/download/packs/des-plaines-il.zip	600	des plaines,cook
