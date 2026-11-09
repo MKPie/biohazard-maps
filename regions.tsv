@@ -1,7 +1,6 @@
 # id, name, grid, lat, lon, center_name, bytes, sha256, url, zip prefixes, places
 # radius: 50 miles (v2)
 los-angeles-ca	Los Angeles, California	none	34.0536923	-118.2427676	Los Angeles, California	3997759	32f3a459287c0ad4196c5af4238c3ba7b20c94ef0642f3d0cb43ae00863a9116	https://github.com/MKPie/biohazard-maps/releases/download/packs/los-angeles-ca.zip		los angeles,los angeles
-baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	3492393	cd5993540748872693d17fbc6ce032ae3da7dc7a01332df53c0ed83260c82158	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
 charlotte-nc	Charlotte, North Carolina	none	35.2272086	-80.8430827	Charlotte, North Carolina	2440480	421d7621d57f1bb8e3288b3a9976cfb5deb759b6fb3324d4f8fee510433a84d1	https://github.com/MKPie/biohazard-maps/releases/download/packs/charlotte-nc.zip		charlotte,mecklenburg
 portland-or	Portland, Oregon	none	45.5202471	-122.674194	Portland, Oregon	1607821	e2bc564de12de1f33964e77a5ec35c65d67577e47ac15e63f040383f5b0bed38	https://github.com/MKPie/biohazard-maps/releases/download/packs/portland-or.zip		portland,multnomah
 sacramento-ca	Sacramento, California	none	38.5810606	-121.493895	Sacramento, California	1766696	55527a4afd62a6aaa183e91f7dd67e7a2935e48c7ce020ec3aaed4bae57f88bd	https://github.com/MKPie/biohazard-maps/releases/download/packs/sacramento-ca.zip		sacramento,sacramento
@@ -63,3 +62,4 @@ orlando-fl	Orlando, Florida	none	28.5421218	-81.379045	Orlando, Florida	2446066	
 saint-louis-mo	Saint Louis, Missouri	none	38.6254063	-90.190009	Saint Louis, Missouri	2012678	ae2a4a5974c9e7b970c5322ad368c3b8ea48e5c3abc88e720abcc1e8741e5a41	https://github.com/MKPie/biohazard-maps/releases/download/packs/saint-louis-mo.zip		saint louis
 denver-co	Denver, Colorado	none	39.7392364	-104.984862	Denver, Colorado	1633031	6968a98094ad5f742c8f36d1823e16c38cd601fcc4e32af6230819dca2d45341	https://github.com/MKPie/biohazard-maps/releases/download/packs/denver-co.zip		denver
 san-antonio-tx	San Antonio, Texas	none	29.4246002	-98.4951405	San Antonio, Texas	1371232	450a8a30c077b43fbb26bc63e86f6b283e97dc17e28c48e2041a882fbe9de8a9	https://github.com/MKPie/biohazard-maps/releases/download/packs/san-antonio-tx.zip		san antonio,bexar
+baltimore-md	Baltimore, Maryland	none	39.2908816	-76.610759	Baltimore, Maryland	3540169	69e8200d591c9ac286e94e28628f36feacdf0a6967d9b17082f99913f05c26d8	https://github.com/MKPie/biohazard-maps/releases/download/packs/baltimore-md.zip		baltimore
