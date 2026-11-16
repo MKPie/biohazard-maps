@@ -25,6 +25,7 @@ DIRS = {"north": "n", "n": "n", "south": "s", "s": "s", "east": "e", "e": "e", "
 IL_ROUTE = re.compile(r"(?:il|illinois)(?: state)?(?: route| rte| hwy| highway)? (\d+)$")
 US_ROUTE = re.compile(r"(?:us|u s)(?: route| rte| hwy| highway)? (\d+)$")
 POINT_PLACES = {"neighbourhood", "suburb", "quarter"}
+MUNI_TYPES = {"city", "town", "village", "borough", "municipality"}
 
 
 def plain(s):
@@ -154,7 +155,10 @@ class Streets(osmium.SimpleHandler):
             return
         lvl = t.get("admin_level")
         is_city = plain(name) in self.cities and (t.get("boundary") == "administrative" or t.get("place") in ("city", "town", "village"))
-        ok = (t.get("boundary") == "administrative" and lvl in self.levels) or t.get("place") in ("neighbourhood", "suburb", "quarter") or is_city
+        # Some states tag their cities, towns and villages at admin_level 5, 6 or 7 (Illinois: Cicero, Berwyn). Keep those when the
+        # boundary itself says it is a city, town, village, borough or municipality; townships and counties stay out.
+        is_municipality = t.get("boundary") == "administrative" and lvl in ("5", "6", "7") and t.get("border_type", "").lower() in MUNI_TYPES
+        ok = (t.get("boundary") == "administrative" and lvl in self.levels) or t.get("place") in ("neighbourhood", "suburb", "quarter") or is_city or is_municipality
         if not ok:
             return
         x0, y0, x1, y1 = self.bbox
