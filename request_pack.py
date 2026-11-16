@@ -3,7 +3,7 @@
 Picks the smallest Geofabrik extracts that cover the 50-mile circle (more than one when it crosses a state line), downloads them, and runs mkpack.py.
   python3 request_pack.py --id evanston-il --name "Evanston, Illinois" --lat 42.045 --lon -87.688 --zips 602 --places evanston
 """
-import argparse, concurrent.futures, json, math, os, re, subprocess, sys, time, urllib.error, urllib.request
+import argparse, concurrent.futures, http.client, json, math, os, re, subprocess, sys, time, urllib.error, urllib.request
 
 INDEX_URL = "https://download.geofabrik.de/index-v1.json"
 RADIUS_MILES = 50     # everything within 50 miles of the city center goes into the pack
@@ -126,6 +126,22 @@ def fetch_all(picks, repo):
         return list(ex.map(lambda p: fetch(p[0], repo), picks))
 
 
+def load_index():
+    """The Geofabrik index. A runner's network sometimes drops for a moment ("Network is unreachable"), so try up to
+    5 times, waiting 5, 10, 15, then 20 seconds between tries. Messages go to stderr: the workflow reads stdout."""
+    waits = [5, 10, 15, 20]
+    for attempt in range(1, len(waits) + 2):
+        try:
+            req = urllib.request.Request(INDEX_URL, headers={"User-Agent": "BioHazard-pack-builder"})
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return json.load(r)
+        except (OSError, ValueError, http.client.HTTPException) as e:
+            if attempt > len(waits):
+                raise
+            print("Geofabrik index download failed (try %d of 5): %s. Trying again in %d seconds." % (attempt, e, waits[attempt - 1]), file=sys.stderr, flush=True)
+            time.sleep(waits[attempt - 1])
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--id", required=True)
@@ -151,8 +167,7 @@ def main():
         if a.index_file:
             index = json.load(open(a.index_file, encoding="utf-8"))
         else:
-            req = urllib.request.Request(INDEX_URL, headers={"User-Agent": "BioHazard-pack-builder"})
-            index = json.load(urllib.request.urlopen(req, timeout=120))
+            index = load_index()
         picks = pick_extracts(index, a.lon, a.lat, RADIUS_KM)
         if not picks:
             sys.exit("No map extract covers %.4f, %.4f" % (a.lat, a.lon))
