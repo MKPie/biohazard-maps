@@ -120,6 +120,44 @@ def pick_extracts(index, lon, lat, radius_km, min_points=3):
     return out
 
 
+def _get(url, dest):
+    req = urllib.request.Request(url, headers={"User-Agent": "BioHazard-pack-builder"})
+    with urllib.request.urlopen(req, timeout=120) as r, open(dest + ".part", "wb") as f:
+        while True:
+            chunk = r.read(1 << 20)
+            if not chunk:
+                break
+            f.write(chunk)
+    os.replace(dest + ".part", dest)
+
+
+def fetch(url, repo=None):
+    """Downloads one map file from Geofabrik, trying up to 3 times."""
+    os.makedirs("extracts", exist_ok=True)
+    name = os.path.basename(url)
+    dest = "extracts/" + name
+    if os.path.exists(dest):
+        return dest
+    t0 = time.time()
+    for attempt in (1, 2, 3):
+        try:
+            _get(url, dest)
+            mb = os.path.getsize(dest) / 1e6
+            dt = max(0.001, time.time() - t0)
+            print("downloaded %s: %.0f MB in %.0f s (%.1f MB/s)" % (name, mb, dt, mb / dt), flush=True)
+            return dest
+        except Exception as e:
+            print("%s try %d failed: %s" % (name, attempt, e), flush=True)
+            time.sleep(3 * attempt)
+    sys.exit("could not download " + name)
+
+
+def fetch_all(picks, repo):
+    """All the files at once, so the slowest one decides the time instead of the sum."""
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, len(picks))) as ex:
+        return list(ex.map(lambda p: fetch(p[0], repo), picks))
+
+
 def _fetch_index(ipv4_only=False):
     req = urllib.request.Request(INDEX_URL, headers={"User-Agent": "BioHazard-pack-builder"})
     if not ipv4_only:
