@@ -61,69 +61,63 @@ def pick_extract(index, lon, lat):
     return None if best is None else (best[1], best[2])
 
 
-def sample_points(lat, lon, radius_km):
-    """The center plus rings of points at half and full radius: every state or country the circle touches holds at least one."""
-    pts = [(lon, lat)]
-    for frac in (0.5, 1.0):
-        for k in range(8):
-            ang = math.radians(45 * k)
-            pts.append((lon + frac * radius_km * math.sin(ang) / (111.320 * max(0.05, math.cos(math.radians(lat)))),
-                        lat + frac * radius_km * math.cos(ang) / 110.574))
-    return [(x, y) for x, y in pts]
+def _bbox(geom):
+    xs, ys = [], []
+    def walk(c):
+        if c and isinstance(c[0], (int, float)):
+            xs.append(c[0]); ys.append(c[1])
+        else:
+            for x in c:
+                walk(x)
+    walk(geom["coordinates"])
+    return min(xs), min(ys), max(xs), max(ys)
 
 
-def pick_extracts(index, lon, lat, radius_km):
-    """[(pbf url, extract id)]: the smallest extract that covers the center and each sample point, no repeats, center's first.
-    Only the center may use a whole-region or whole-country file (id without a slash, like us-midwest). Points out on a lake or
-    over a border would otherwise pull in a multi-gigabyte regional file just to cover water, which cost a 9 minute download."""
-    out, seen = [], set()
-    for x, y in sample_points(lat, lon, radius_km):
-        p = pick_extract(index, x, y)
-        if p is None or p[1] in seen:
+def grid_points(lat, lon, radius_km, step_km=4.0):
+    """Points every step_km across the whole circle. A ring of 16 points missed small states close by: Delaware for
+    Philadelphia, Washington DC for Baltimore and Alexandria."""
+    kx = 111.320 * max(0.05, math.cos(math.radians(lat)))
+    ky = 110.574
+    n = int(radius_km // step_km)
+    return [(lon + i * step_km / kx, lat + j * step_km / ky) for i in range(-n, n + 1) for j in range(-n, n + 1)
+            if (i * step_km) ** 2 + (j * step_km) ** 2 <= radius_km * radius_km]
+
+
+def pick_extracts(index, lon, lat, radius_km, min_points=3):
+    """[(pbf url, extract id)]: the smallest extract at the center first, then every other state-sized extract that holds
+    at least min_points grid points (about 50 square km of the circle), so a sliver of a neighbor's buffer over a lake
+    does not pull in a whole state. Only the center may use a whole-region or whole-country file (id without a slash)."""
+    feats = []
+    for f in index["features"]:
+        urls = (f.get("properties") or {}).get("urls") or {}
+        if urls.get("pbf") and f.get("geometry"):
+            feats.append((f, _bbox(f["geometry"]), area(f["geometry"])))
+
+    def pick(x, y):
+        best = None
+        for f, b, a in feats:
+            if not (b[0] <= x <= b[2] and b[1] <= y <= b[3]) or not contains(f["geometry"], x, y):
+                continue
+            if best is None or a < best[0]:
+                best = (a, f["properties"]["urls"]["pbf"], f["properties"].get("id"))
+        return None if best is None else (best[1], best[2])
+
+    center = pick(lon, lat)
+    out = [center] if center else []
+    counts, urls = {}, {}
+    for x, y in grid_points(lat, lon, radius_km):
+        p = pick(x, y)
+        if p is None:
             continue
-        if out and "/" not in (p[1] or ""):
+        counts[p[1]] = counts.get(p[1], 0) + 1
+        urls[p[1]] = p[0]
+    for eid in sorted(counts, key=lambda k: -counts[k]):
+        if center and eid == center[1]:
             continue
-        seen.add(p[1])
-        out.append(p)
+        if "/" not in (eid or "") or counts[eid] < min_points:
+            continue
+        out.append((urls[eid], eid))
     return out
-
-
-def _get(url, dest):
-    req = urllib.request.Request(url, headers={"User-Agent": "BioHazard-pack-builder"})
-    with urllib.request.urlopen(req, timeout=120) as r, open(dest + ".part", "wb") as f:
-        while True:
-            chunk = r.read(1 << 20)
-            if not chunk:
-                break
-            f.write(chunk)
-    os.replace(dest + ".part", dest)
-
-
-def fetch(url, repo=None):
-    """Downloads one map file from Geofabrik, trying up to 3 times."""
-    os.makedirs("extracts", exist_ok=True)
-    name = os.path.basename(url)
-    dest = "extracts/" + name
-    if os.path.exists(dest):
-        return dest
-    t0 = time.time()
-    for attempt in (1, 2, 3):
-        try:
-            _get(url, dest)
-            mb = os.path.getsize(dest) / 1e6
-            dt = max(0.001, time.time() - t0)
-            print("downloaded %s: %.0f MB in %.0f s (%.1f MB/s)" % (name, mb, dt, mb / dt), flush=True)
-            return dest
-        except Exception as e:
-            print("%s try %d failed: %s" % (name, attempt, e), flush=True)
-            time.sleep(3 * attempt)
-    sys.exit("could not download " + name)
-
-
-def fetch_all(picks, repo):
-    """All the files at once, so the slowest one decides the time instead of the sum."""
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, len(picks))) as ex:
-        return list(ex.map(lambda p: fetch(p[0], repo), picks))
 
 
 def _fetch_index(ipv4_only=False):
