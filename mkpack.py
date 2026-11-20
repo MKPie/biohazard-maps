@@ -153,12 +153,17 @@ class Streets(osmium.SimpleHandler):
         name = t.get("name")
         if not name:
             return
-        lvl = t.get("admin_level")
+        # "admin" is a common typo for admin_level (Rosemead, California is tagged admin=8).
+        lvl = t.get("admin_level") or t.get("admin")
         is_city = plain(name) in self.cities and (t.get("boundary") == "administrative" or t.get("place") in ("city", "town", "village"))
         # Some states tag their cities, towns and villages at admin_level 5, 6 or 7 (Illinois: Cicero, Berwyn). Keep those when the
         # boundary itself says it is a city, town, village, borough or municipality; townships and counties stay out.
-        is_municipality = t.get("boundary") == "administrative" and lvl in ("5", "6", "7") and t.get("border_type", "").lower() in MUNI_TYPES
-        ok = (t.get("boundary") == "administrative" and lvl in self.levels) or t.get("place") in ("neighbourhood", "suburb", "quarter") or is_city or is_municipality
+        # border_type can hold several values: Denver and Broomfield, Colorado are "county;city" (consolidated city-counties).
+        kinds = {k.strip() for k in t.get("border_type", "").lower().split(";")}
+        is_municipality = t.get("boundary") == "administrative" and lvl in ("5", "6", "7") and bool(kinds & MUNI_TYPES)
+        # A city that is not an admin area at all: Washington, D.C. is boundary=place, place=city.
+        is_place_city = t.get("boundary") == "place" and t.get("place") in ("city", "town", "village")
+        ok = (t.get("boundary") == "administrative" and lvl in self.levels) or t.get("place") in ("neighbourhood", "suburb", "quarter") or is_city or is_municipality or is_place_city
         if not ok:
             return
         x0, y0, x1, y1 = self.bbox
