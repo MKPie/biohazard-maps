@@ -126,20 +126,46 @@ def fetch_all(picks, repo):
         return list(ex.map(lambda p: fetch(p[0], repo), picks))
 
 
+def _fetch_index(ipv4_only=False):
+    req = urllib.request.Request(INDEX_URL, headers={"User-Agent": "BioHazard-pack-builder"})
+    if not ipv4_only:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.load(r)
+    # Some runners have no IPv6 route; "Network is unreachable" then comes from the IPv6 address. Ask for IPv4 only.
+    import socket
+    real = socket.getaddrinfo
+    socket.getaddrinfo = lambda host, port, family=0, *a, **k: real(host, port, socket.AF_INET, *a, **k)
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return json.load(r)
+    finally:
+        socket.getaddrinfo = real
+
+
 def load_index():
-    """The Geofabrik index. A runner's network sometimes drops for a moment ("Network is unreachable"), so try up to
-    5 times, waiting 5, 10, 15, then 20 seconds between tries. Messages go to stderr: the workflow reads stdout."""
+    """The Geofabrik index. A runner's network sometimes drops ("Network is unreachable"), so try up to 5 times, waiting
+    5, 10, 15, then 20 seconds; then once over IPv4 only; then use the copy kept in this repo (geofabrik-index-v1.json,
+    the extracts and their outlines rarely change). Messages go to stderr: the workflow reads stdout."""
     waits = [5, 10, 15, 20]
     for attempt in range(1, len(waits) + 2):
         try:
-            req = urllib.request.Request(INDEX_URL, headers={"User-Agent": "BioHazard-pack-builder"})
-            with urllib.request.urlopen(req, timeout=120) as r:
-                return json.load(r)
+            return _fetch_index()
         except (OSError, ValueError, http.client.HTTPException) as e:
             if attempt > len(waits):
-                raise
+                print("Geofabrik index download failed (try %d of 5): %s." % (attempt, e), file=sys.stderr, flush=True)
+                break
             print("Geofabrik index download failed (try %d of 5): %s. Trying again in %d seconds." % (attempt, e, waits[attempt - 1]), file=sys.stderr, flush=True)
             time.sleep(waits[attempt - 1])
+    try:
+        return _fetch_index(ipv4_only=True)
+    except (OSError, ValueError, http.client.HTTPException) as e:
+        print("Geofabrik index over IPv4 failed too: %s." % e, file=sys.stderr, flush=True)
+    local = os.path.join(os.path.dirname(os.path.abspath(__file__)), "geofabrik-index-v1.json")
+    if os.path.exists(local):
+        print("Using the saved copy of the Geofabrik index: " + local, file=sys.stderr, flush=True)
+        with open(local, encoding="utf-8") as f:
+            return json.load(f)
+    raise SystemExit("could not get the Geofabrik index")
 
 
 def main():
